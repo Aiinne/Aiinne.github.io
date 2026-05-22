@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aine Store - Layanan Penyewaan Bot WhatsApp Otomatis Premium & High-Performance Server Hosting Terpercaya." />
-  <meta name="keywords" content="Aine Store, AineBOT, Bot WhatsApp, Sewa Bot WhatsApp, Server Pterodactyl, Hosting Bot, WhatsApp Bot Indonesia, Adelin Team" />
+  <meta name="keywords" content="Aine Store, AineBOT, Bot WhatsApp, Sewa Bot WhatsApp, Server Pterodactyl, Hosting Bot, WhatsApp Bot Indonesia, Peraturan Bot Aine" />
   <meta name="author" content="Muhammad Ridwan Reynaldy" />
   <meta name="theme-color" content="#ff4785" />
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://github.com/Aiinne" />
   <meta property="og:title" content="Aine Store - Premium WhatsApp Bot & Server Hosting" />
-  <meta property="og:description" content="Tingkatkan produktivitas grup Anda dengan Bot WhatsApp otomatis terlengkap dan server hosting anti-delay 24 jam non-stop." />
+  <meta property="og:description" content="Tingkatkan produktivitas grup Anda dengan Bot WhatsApp otomatis terlengkap dan peraturan penggunaan yang transparan." />
   <meta property="og:image" content="https://telegra.ph/file/15949d8a573663b0a790d.jpg" />
 
   <title>Aine Store - Premium WhatsApp Bot & Server Hosting</title>
@@ -251,7 +251,7 @@
     }
 
     /* ==========================================================================
-       4. HERO HERO SECTION
+       4. HERO SECTION WITH INTEGRATION SIMULATOR
        ========================================================================== */
     .hero-wrapper {
       position: relative;
@@ -467,115 +467,74 @@
     }
 
     /* ==========================================================================
-       7. SIMULATOR COMMAND CATALOG SHOWCASE
+       7. PERATURAN PENGGUNAAN BOT AINE SECTION (ELEGANT LEGAL GRID)
        ========================================================================== */
-    .catalog-showcase {
+    .rules-section {
       background-color: #ffffff;
     }
 
-    .catalog-layout {
+    .rules-grid-pro {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 60px;
-      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
-    .catalog-text h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-    }
-
-    .catalog-text p {
-      color: var(--text-muted);
-      margin-bottom: 30px;
-    }
-
-    .cmd-list {
-      display: grid;
-      gap: 16px;
-    }
-
-    .cmd-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px;
+    .rule-card {
+      background-color: #f8fafc;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
+      padding: 28px;
       transition: var(--transition);
-      cursor: pointer;
-    }
-
-    .cmd-item:hover, .cmd-item.active {
-      border-color: var(--primary);
-      background-color: var(--primary-light);
-    }
-
-    .cmd-tag {
-      font-family: monospace;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      background-color: rgba(255, 71, 133, 0.12);
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-
-    .cmd-desc h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .cmd-desc p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    /* Screen Mockup Component */
-    .mockup-display {
-      background-color: var(--bg-dark);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border-dark);
-    }
-
-    .mockup-top-bar {
       display: flex;
-      gap: 6px;
-      margin-bottom: 14px;
+      gap: 20px;
     }
 
-    .mockup-dot {
-      width: 10px;
-      height: 10px;
+    .rule-card:hover {
+      border-color: var(--primary);
+      background-color: #ffffff;
+      box-shadow: var(--shadow-md);
+    }
+
+    .rule-index {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.2);
+      background: var(--primary-gradient);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
     }
 
-    .mockup-dot-red { background-color: #ef4444; }
-    .mockup-dot-yellow { background-color: #eab308; }
-    .mockup-dot-green { background-color: #22c55e; }
-
-    .mockup-terminal {
-      font-family: 'Courier New', Courier, monospace;
-      color: #38bdf8;
-      font-size: 0.9rem;
-      line-height: 1.5;
+    .rule-body h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
     }
 
-    .mockup-terminal pre {
-      white-space: pre-wrap;
-      color: #e2e8f0;
+    .rule-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
-    .mockup-terminal .keyword { color: #ff4785; }
-    .mockup-terminal .string { color: #10b981; }
-    .mockup-terminal .comment { color: #64748b; }
+    .rules-footer-notice {
+      grid-column: span 2;
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-light);
+      border: 1px dashed var(--primary);
+      border-radius: var(--radius-sm);
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 20px;
+      font-style: italic;
+    }
 
     /* ==========================================================================
        8. PRICING TIERS SECTION (SENADA DENGAN GAMBAR BROSUR)
@@ -988,7 +947,7 @@
        13. RESPONSIVE MEDIA QUERIES
        ========================================================================== */
     @media (max-width: 1024px) {
-      .hero-grid, .catalog-layout, .about-box {
+      .hero-grid, .rules-grid-pro, .about-box {
         grid-template-columns: 1fr;
         gap: 50px;
       }
@@ -1001,10 +960,13 @@
       .footer-grid-main {
         grid-template-columns: repeat(2, 1fr);
       }
+      .rules-footer-notice {
+        grid-column: span 1;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-menu { display: none; } /* Simpel top links fallback */
+      .nav-menu { display: none; }
       .features-container-grid, .pricing-grid-pro, .testimonials-grid, .flow-grid, .footer-grid-main {
         grid-template-columns: 1fr;
       }
@@ -1040,7 +1002,7 @@
       <ul class="nav-menu">
         <li><a class="nav-item active" href="#home">Home</a></li>
         <li><a href="#features" class="nav-item">Fitur</a></li>
-        <li><a href="#catalog" class="nav-item">Katalog</a></li>
+        <li><a href="#rules" class="nav-item">Peraturan</a></li>
         <li><a href="#pricing" class="nav-item">Harga</a></li>
         <li><a href="#faq" class="nav-item">FAQ</a></li>
         <li><a href="https://wa.me/62895330379186" target="_blank" class="nav-item" style="color: var(--primary);">Hubungi Admin</a></li>
@@ -1067,7 +1029,7 @@
           <div class="avatar-bot">🤖</div>
           <div class="avatar-info">
             <h3>Aine Virtual Assistant</h3>
-            <p>Online • Adelin Team Agent</p>
+            <p>Online • Official Service Agent</p>
           </div>
         </div>
         <div class="chat-body">
@@ -1174,59 +1136,165 @@
     </div>
   </section>
 
-  <!-- LAYER KATALOG TERMINAL SIMULATION -->
-  <section class="catalog-showcase" id="catalog">
-    <div class="container catalog-layout">
-      <div class="catalog-text">
-        <span class="badge badge-primary">Interactive System Demo</span>
-        <h3>Katalog Perintah Bot Ringkas</h3>
-        <p>Berikut adalah visualisasi cara kerja interaksi perintah sistem kontrol bot yang tertanam pada runtime core kami.</p>
-        
-        <div class="cmd-list">
-          <div class="cmd-item active">
-            <span class="cmd-tag">.totext</span>
-            <div class="cmd-desc">
-              <h4>Audio/VN Transcription</h4>
-              <p>Mengekstrak ucapan suara audio menjadi susunan text string.</p>
-            </div>
-          </div>
-          <div class="cmd-item">
-            <span class="cmd-tag">.copy</span>
-            <div class="cmd-desc">
-              <h4>Interactive Copy CTA Button</h4>
-              <p>Mengirimkan tombol khusus untuk menyalin text ke clipboard hp.</p>
-            </div>
-          </div>
-          <div class="cmd-item">
-            <span class="cmd-tag">.imgai</span>
-            <div class="cmd-desc">
-              <h4>Text-to-Image Generation</h4>
-              <p>Membuat gambar imajinatif dari prompt deskripsi text.</p>
-            </div>
-          </div>
-        </div>
+  <!-- LAYER SYARAT & KETENTUAN PERATURAN PENGGUNAAN BOT AINE -->
+  <section class="rules-section" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-primary">Legal & Compliance</span>
+        <h2>Syarat & Ketentuan Peraturan Penggunaan Bot Aine</h2>
+        <p>Harap baca dan pahami seluruh poin regulasi di bawah ini demi kenyamanan, keamanan, dan kelancaran bersama selama menggunakan sistem operasional kami.</p>
       </div>
 
-      <div class="mockup-display">
-        <div class="mockup-top-bar">
-          <div class="mockup-dot mockup-dot-red"></div>
-          <div class="mockup-dot mockup-dot-yellow"></div>
-          <div class="mockup-dot mockup-dot-green"></div>
+      <div class="rules-grid-pro">
+        
+        <div class="rule-card">
+          <div class="rule-index">1</div>
+          <div class="rule-body">
+            <h4>Akses Data Pengguna</h4>
+            <p>Bot mungkin mengakses data tertentu, seperti nama pengguna dan nomor telepon, untuk memberikan layanan. Data akan disimpan dengan aman dan tidak dibagikan tanpa izin Anda.</p>
+          </div>
         </div>
-        <div class="mockup-sound-code mockup-terminal">
-          <span class="comment">// Struktur logika Core Transcribe Engine</span>
-          <pre><span class="keyword">let</span> fileType = <span class="keyword">await</span> fileTypeFromBuffer(media);
-<span class="keyword">let</span> ext = fileType ? <span class="string">`.${fileType.ext}`</span> : <span class="string">'.mp3'</span>;
-tmpFile = tmpFileBase + ext;
-fs.writeFileSync(tmpFile, media);
 
-<span class="comment">// Eksekusi request API ke AWS Object Storage</span>
-<span class="keyword">const</span> Transcriber = <span class="keyword">new</span> AudioConvertAI();
-<span class="keyword">let</span> textResult = <span class="keyword">await</span> Transcriber.process(tmpFile);
-m.reply(<span class="string">`📝 Transkripsi Sukses: 
-
-`</span> + textResult);</pre>
+        <div class="rule-card">
+          <div class="rule-index">2</div>
+          <div class="rule-body">
+            <h4>Penghapusan Data</h4>
+            <p>Data Anda akan dihapus jika terjadi masalah pada database yang memerlukan penghapusan massal.</p>
+          </div>
         </div>
+
+        <div class="rule-card">
+          <div class="rule-index">3</div>
+          <div class="rule-body">
+            <h4>Kebijakan Media</h4>
+            <p>Bot tidak menyimpan gambar, video, file, audio, atau dokumen yang Anda kirimkan.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">4</div>
+          <div class="rule-body">
+            <h4>Privasi Pengguna</h4>
+            <p>Bot tidak meminta informasi pribadi. Harap waspada terhadap penipuan.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">5</div>
+          <div class="rule-body">
+            <h4>Pelaporan Masalah</h4>
+            <p>Laporkan bug atau error kepada pemilik (Owner) bot.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">6</div>
+          <div class="rule-body">
+            <h4>Respon Bot</h4>
+            <p>Kirimkan perintah sekali. Jika tidak merespons, ulangi. Jika tetap tidak merespons, bot mungkin sedang offline.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">7</div>
+          <div class="rule-body">
+            <h4>Spam & Penyalahgunaan</h4>
+            <p>Dilarang melakukan spam, membagikan virus/virtex, melakukan panggilan (telepon/video), atau mengirim chat pribadi tanpa izin. Pelanggaran akan menyebabkan akun Anda diblokir.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">8</div>
+          <div class="rule-body">
+            <h4>Penghapusan Access</h4>
+            <p>Pengguna yang menendang bot dari grup (baik karena durasi berakhir atau sengaja) tidak berhak atas refund.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">9</div>
+          <div class="rule-body">
+            <h4>Keterlibatan Admin/Owner</h4>
+            <p>Admin atau Owner dapat memantau aktivitas bot untuk memastikan kelancaran layanan.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">10</div>
+          <div class="rule-body">
+            <h4>Penyewaan Bot</h4>
+            <p>Akses bot di grup hanya melalui sistem sewa. Tidak ada permintaan gratis.</p>
+          </div>
+        </div>
+
+        <div class="rule-card" style="grid-column: span 2;">
+          <div class="rule-index">11</div>
+          <div class="rule-body">
+            <h4>Pelanggaran Syarat & Ketentuan</h4>
+            <p>Pengelola berhak menghentikan akses pengguna yang melanggar peraturan atau menggunakan bot dengan cara yang tidak sesuai dengan syarat dan ketentuan. Jika pelanggaran dilakukan secara serius, seperti penyalahgunaan bot untuk tujuan ilegal, merusak sistem, atau melanggar hukum, kami akan memblokir akses secara permanen tanpa pemberitahuan sebelumnya. Pelaporan kepada pihak berwenang dapat dilakukan jika pelanggaran dianggap merugikan secara hukum atau melibatkan kejahatan siber.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">12</div>
+          <div class="rule-body">
+            <h4>Spam Command</h4>
+            <p>Spam perintah akan dikenakan ban sementara selama 5 jam.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">13</div>
+          <div class="rule-body">
+            <h4>Kehadiran afk & kick bot</h4>
+            <p>Pengguna yang afk lebih dari 3 hari akan diblokir otomatis. Pengguna yang mengkick bot dengan sengaja ataupun tidak sengaja system otomatis memblockir pengguna tersebut.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">14</div>
+          <div class="rule-body">
+            <h4>Pembukaan Blokir & Banned</h4>
+            <p>Denda Rp 2.678,- untuk membuka blokir (Gunakan perintah: <code>/bayarunblock</code>). Denda Rp 1.567,- untuk membuka banned (Gunakan perintah: <code>/bayarunbanned</code>).</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">15</div>
+          <div class="rule-body">
+            <h4>Layanan Premium</h4>
+            <p>Gunakan perintah <code>/bayarpremium</code> untuk aktivasi akun premium dan <code>/bayarpremiumgroup</code> untuk group premium. Pengguna/group premium tidak dikenakan sanksi banned 5 jam, mendapatkan unlimited limit, serta membuka akses seluruh fitur.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">16</div>
+          <div class="rule-body">
+            <h4>Pembelian Limit</h4>
+            <p>Gunakan perintah <code>/bayarlimit</code> untuk membeli kuota limit penggunaan tambahan.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-index">17</div>
+          <div class="rule-body">
+            <h4>Perpanjangan Durasi</h4>
+            <p>Gunakan perintah <code>/bayarexpired</code> untuk memperpanjang durasi keaktifan bot di dalam grup.</p>
+          </div>
+        </div>
+
+        <div class="rule-card" style="grid-column: span 2;">
+          <div class="rule-index">18</div>
+          <div class="rule-body">
+            <h4>Penolakan Tanggung Jawab</h4>
+            <p>Segala perintah melalui bot adalah tanggung jawab pengguna sepenuhnya. Kami pihak pengembang tidak bertanggung jawab atas segala konsekuensi atau kerugian yang ditimbulkan akibat penyalahgunaan perintah tersebut.</p>
+          </div>
+        </div>
+
+        <div class="rules-footer-notice">
+          _Mohon patuhi peraturan ini agar pengalaman menggunakan bot tetap lancar dan menyenangkan. Terima kasih! 😊_
+        </div>
+
       </div>
     </div>
   </section>
@@ -1373,7 +1441,7 @@ m.reply(<span class="string">`📝 Transkripsi Sukses:
 
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p>"Fitur transkripsi audio (.totext) sangat menolong ketika saya sibuk di kantor dan tidak sempat mendengarkan rekaman VN yang panjang."</p>
+          <p>"Fitur transkripsi audio (.totext) sangat menoleh ketika saya sibuk di kantor dan tidak sempat mendengarkan rekaman VN yang panjang."</p>
           <div class="testi-profile">
             <div class="testi-avatar">A</div>
             <div class="testi-info">
@@ -1460,7 +1528,7 @@ m.reply(<span class="string">`📝 Transkripsi Sukses:
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Fitur Utama</a></li>
-          <li><a href="#catalog">Katalog Menu</a></li>
+          <li><a href="#rules">Peraturan</a></li>
           <li><a href="#pricing">Daftar Harga</a></li>
         </ul>
       </div>
@@ -1480,14 +1548,14 @@ m.reply(<span class="string">`📝 Transkripsi Sukses:
           <div class="contact-widget-item">👤 Muhammad Ridwan Reynaldy</div>
           <div class="contact-widget-item">📱 +62 895-3303-79186</div>
           <div class="contact-widget-item">✉️ anemio100@gmail.com</div>
-          <div class="contact-widget-item">© ADELIN TEAM Copyright</div>
+          <div class="contact-widget-item">© Aine Store Copyright</div>
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <p>© 2026 <strong>Aine Store</strong>. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Developed with passion by Adelin Team</p>
+      <p>Developed with passion for high-performance automation ecosystems.</p>
     </div>
   </footer>
 
