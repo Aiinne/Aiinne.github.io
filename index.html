@@ -1,361 +1,723 @@
 <!doctype html>
-<html lang='en'>
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
-    <title>Aine Bot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" link
-        rel="stylesheet" href="css/style.scss" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,100" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AineBOT adalah layanan bot WhatsApp dengan paket free trial, premium, dan VIP." />
+  <meta name="keywords" content="AineBOT, Bot WhatsApp, Sewa Bot WhatsApp, WhatsApp Bot Indonesia" />
+  <meta name="author" content="Muhammad Ridwan Reynaldy" />
+  <meta name="theme-color" content="#00c2ff" />
 
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+  <meta property="og:title" content="AineBOT - Sewa Bot WhatsApp" />
+  <meta property="og:description" content="Bot WhatsApp responsif dengan fitur lengkap, limit fleksibel, dan dukungan 24 jam." />
+  <meta property="og:type" content="website" />
 
-        * {
-            box-sizing: border-box;
-        }
+  <title>AineBOT - Sewa Bot WhatsApp</title>
 
-        body {
-            background-color: #fff;
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-        }
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2f;
+      --card: #ffffff;
+      --text: #132033;
+      --muted: #65758b;
+      --white: #ffffff;
+      --primary: #00c2ff;
+      --primary-dark: #0099d6;
+      --border: rgba(15, 23, 42, 0.12);
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+      --radius: 22px;
+      --max-width: 1120px;
+    }
 
-        .container {
-            padding: 1rem;
-            margin: 0 auto;
-            max-width: 100%;
-            width: 1000px;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            background-image: url("https://l.top4top.io/p_2155hxgxy0.png");
-            background-size: cover;
-            background-position: center center;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            min-height: calc(100vh - 102px);
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .content {
-            font-size: 2rem;
-            margin: auto;
-            max-width: 100%;
-        }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: #f6f9fc;
+      line-height: 1.6;
+    }
 
-        .content h1 {
-            color: #00c2ff;
-            margin-bottom: 0;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        nav .logo {
-            font-size: 2.5rem;
-        }
+    .container {
+      width: min(100% - 32px, var(--max-width));
+      margin-inline: auto;
+    }
 
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
 
-        nav li a {
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-        }
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 194, 255, 0.24);
+    }
 
-        .selected {
-            font-weight: bold;
-        }
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    }
 
-        .highlight {
-            background-color: #00c2ff;
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-        }
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
 
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 1rem;
-        }
+    .site-header {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.70)),
+        url("https://l.top4top.io/p_2155hxgxy0.png") center / cover no-repeat;
+    }
 
-        footer ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            list-style-type: none;
-            padding: 0;
-        }
+    .site-header::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -30% auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(0, 194, 255, 0.18);
+      filter: blur(8px);
+    }
 
-        footer strong {
-            color: #00c2ff;
-        }
+    .navbar {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 24px;
+    }
 
-        footer p {
-            margin: 0;
-        }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
 
-        @media screen and (max-width: 700px) {
-            .content {
-                margin: 2rem auto 0;
-                font-size: 1.4rem;
-            }
+    .brand-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px;
+      color: var(--white);
+      background: rgba(0, 194, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
 
-            nav ul {
-                flex-direction: column;
-            }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-            nav li:not(:last-child) {
-                margin-bottom: 1rem;
-            }
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 650;
+      transition: background 180ms ease, color 180ms ease;
+    }
 
-            nav .highlight {
-                display: none;
-            }
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a.active {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+    }
 
-            footer ul {
-                flex-direction: column;
-                justify-content: center;
-            }
+    .hero {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 40px;
+      align-items: center;
+      min-height: 640px;
+      padding: 58px 0 96px;
+    }
 
-            footer li {
-                margin: 1rem;
-                text-align: center;
-            }
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.86);
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-        /* pricing */
+    .hero h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    .hero h1 span {
+      color: var(--primary);
+    }
 
-        .price-header h1 {
-            text-align: center;
-            font-family: 'Lato', sans-serif;
-            font-size: 25px;
-            line-height: 32px;
-            padding-top: 70px;
-        }
+    .hero p {
+      max-width: 650px;
+      margin: 24px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
 
-        h1 a {
-            color: #66CCCC;
-        }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
 
-        .price-table-wrapper {
-            font-family: 'Lato', sans-serif;
-            text-align: center;
-            margin-top: 30px;
-        }
+    .hero-card {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    }
 
-        .price-table-wrapper .featured-table {
-            box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
-        }
+    .hero-card h2 {
+      margin: 0 0 20px;
+      font-size: 1.1rem;
+    }
 
-        .price-table-wrapper .pricing-table {
-            display: inline-block;
-            border: 1px solid #C8C8C8;
-            border-radius: 10px;
-            background: white;
-            margin: 20px;
-            transition: all 0.3s ease-in-out;
-        }
+    .stats {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+    }
 
-        .price-table-wrapper .pricing-table__header {
-            padding: 20px;
-            font-size: 20px;
-            color: #909090;
-            background: #E0E0E0;
-        }
+    .stat {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    }
 
-        .price-table-wrapper .pricing-table__price {
-            color: #66CCCC;
-            padding: 20px;
-            margin: auto;
-            font-size: 40px;
-            font-weight: 500;
-        }
+    .stat:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
 
-        .price-table-wrapper .pricing-table__button {
-            display: block;
-            background: #66CCCC;
-            text-decoration: none;
-            padding: 20px;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
+    .stat strong {
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
 
-        .price-table-wrapper .pricing-table__button:before {
-            position: absolute;
-            left: -20%;
-            top: -10%;
-            content: '';
-            width: 60%;
-            height: 220%;
-            transform: rotate(-30deg);
-            background: white;
-            opacity: .3;
-            transition: all 0.3s ease-in-out;
-        }
+    .stat span {
+      color: rgba(255, 255, 255, 0.72);
+    }
 
-        .price-table-wrapper .pricing-table__button:after {
-            position: absolute;
-            content: '>';
-            top: 0;
-            right: 0;
-            font-size: 25px;
-            padding: 15px;
-            padding-right: 40px;
-            color: white;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-        }
+    section {
+      padding: 86px 0;
+    }
 
-        .price-table-wrapper .pricing-table__button:hover {
-            background: black;
-        }
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
 
-        .price-table-wrapper .pricing-table__list {
-            padding: 20px;
-            color: #A0A0A0;
-        }
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
 
-        .price-table-wrapper .pricing-table__list li {
-            padding: 15px;
-            border-bottom: 1px solid #C8C8C8;
-            list-style: none;
-        }
+    .section-header p {
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
 
-        .price-table-wrapper .pricing-table__list li:last-child {
-            border: none;
-        }
+    .features-grid,
+    .pricing-grid {
+      display: grid;
+      gap: 22px;
+    }
 
-        .price-table-wrapper .pricing-table:hover {
-            box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
-        }
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-        .price-table-wrapper .pricing-table:hover .pricing-table__button {
-            padding-left: 0;
-            padding-right: 35px;
-        }
+    .feature-card,
+    .pricing-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+    }
 
-        .price-table-wrapper .pricing-table:hover .pricing-table__button:before {
-            top: -80%;
-            transform: rotate(0deg);
-            width: 100%;
-        }
+    .feature-card {
+      padding: 26px;
+    }
 
-        .price-table-wrapper .pricing-table:hover .pricing-table__button:after {
-            opacity: 1;
-            padding-right: 15px;
-        }
-    </style>
+    .feature-card .icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      place-items: center;
+      border-radius: 16px;
+      color: var(--primary-dark);
+      background: rgba(0, 194, 255, 0.12);
+      font-size: 1.35rem;
+    }
+
+    .feature-card h3,
+    .pricing-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .pricing {
+      background: #ffffff;
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 194, 255, 0.36);
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(0, 194, 255, 0.54);
+      box-shadow: var(--shadow);
+    }
+
+    .badge {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(0, 194, 255, 0.12);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .price {
+      margin: 12px 0 22px;
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 650;
+      letter-spacing: 0;
+    }
+
+    .pricing-card ul {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .pricing-card li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .pricing-card li::before {
+      content: "✓";
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      color: var(--primary-dark);
+      background: rgba(0, 194, 255, 0.12);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-align: center;
+      line-height: 22px;
+    }
+
+    .pricing-card .btn {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .about {
+      background: linear-gradient(135deg, #f6f9fc, #eef7fb);
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 8px);
+      background: var(--white);
+      box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
+    }
+
+    .about-box h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .about-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #f8fafc;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .site-footer {
+      color: rgba(255, 255, 255, 0.78);
+      background: var(--bg);
+      padding: 32px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-inner strong {
+      color: var(--white);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--primary);
+    }
+
+    @media (max-width: 900px) {
+      .navbar,
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .hero,
+      .about-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 48px 0 76px;
+      }
+
+      .features-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 24px, var(--max-width));
+      }
+
+      .navbar {
+        padding-block: 18px;
+      }
+
+      .nav-links a {
+        padding: 9px 11px;
+        font-size: 0.92rem;
+        white-space: nowrap;
+      }
+
+      .hero-card,
+      .feature-card,
+      .pricing-card,
+      .about-box {
+        padding: 22px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <i class="fas fa-robot"></i><button onclick="typeWriter()"
-                    style="border-radius: 10px; background: none; opacity: 10px;">
-                    <font id="demo" face="aladin" size="6" color="white">AineBOT<br></font>
-                </button>
-            </div>
+  <header class="site-header" id="home">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="AineBOT Home">
+        <span class="brand-icon" aria-hidden="true">🤖</span>
+        <span>AineBOT</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#features">Fitur</a></li>
+        <li><a href="#pricing">Harga</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="https://wa.me/6289654360447" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero container" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">⚡ Bot WhatsApp siap pakai untuk kebutuhan komunitas dan bisnis</p>
+        <h1 id="hero-title">Sewa <span>Bot WhatsApp</span> yang cepat, stabil, dan mudah digunakan.</h1>
+        <p>
+          AineBOT membantu mengelola grup, menjalankan fitur otomatis, dan memberi pengalaman yang lebih praktis untuk pengguna WhatsApp.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20sewa%20Bot%20WhatsApp." target="_blank" rel="noopener noreferrer">Order Sekarang</a>
+          <a class="btn btn-outline" href="#pricing">Lihat Paket</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Ringkasan layanan AineBOT">
+        <h2>Kenapa AineBOT?</h2>
+        <dl class="stats">
+          <div class="stat">
+            <dt>Support</dt>
+            <dd><strong>24 Jam</strong><br><span>Bantuan aktif saat diperlukan</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Limit</dt>
+            <dd><strong>Fleksibel</strong><br><span>Tersedia paket trial sampai VIP</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Fitur</dt>
+            <dd><strong>Lengkap</strong><br><span>Cocok untuk grup dan komunitas</span></dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Fitur utama</h2>
+          <p>Paket dibuat sederhana agar mudah dipilih, namun tetap mendukung kebutuhan penggunaan harian.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">⚙️</div>
+            <h3>Otomatisasi Grup</h3>
+            <p>Membantu menjalankan perintah, limit pengguna, dan fitur bot secara otomatis di WhatsApp.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">🚀</div>
+            <h3>Siap Digunakan</h3>
+            <p>Tidak perlu membuat sistem dari nol. Pilih paket, hubungi admin, dan bot siap diaktifkan.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <h3>Dukungan Admin</h3>
+            <p>Dapatkan bantuan untuk aktivasi, pemakaian, dan pengaturan sesuai paket yang dipilih.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Paket harga</h2>
+          <p>Pilih paket sewa server dan bot yang paling cocok untuk kebutuhan kamu.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <span class="badge">Trial</span>
+            <h3>Free Jadibot</h3>
+            <div class="price">Rp0 <small>/ 3 hari</small></div>
             <ul>
-                <li><a href="#" class="selected">Home</a></li>
-                <li><a href="https://wa.me/62896543604474">Contact</a></li>
-                <li><a href="/about/">My About</a></li>
-                <li><a href="https://wa.me/6289654360447" class="highlight">Number Bot</a></li>
+              <li>Trial gratis selama 3 hari</li>
+              <li>Tanpa custom fitur</li>
+              <li>1.000 limit untuk semua member</li>
+              <li>Semua fitur utama aktif</li>
+              <li>Support 24 jam</li>
             </ul>
-        </nav>
-        <div class="content">
-            <div class="container">
-                <h1>Bot WhatsApp</h1>
-                <p>Nomor Robot WhatsApp</p>
-                <a class="highlight" href="https://wa.me/6289654360447">Number Bot</a>
-            </div>
-        </div>
-    </header>
+            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20Free%20Jadibot." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+          </article>
 
-    <!-- Pricing -->
-    <div class="price-header">
-        <h1>Harga Sewa Server <br> By <a target="blank" href="https://github.com/Aiinne">AINE
-            </a></h1>
+          <article class="pricing-card featured">
+            <span class="badge">Paling populer</span>
+            <h3>Premium</h3>
+            <div class="price">Rp45.000 <small>/ 30 hari</small></div>
+            <ul>
+              <li>Masa aktif 30 hari</li>
+              <li>Tanpa custom fitur</li>
+              <li>Limit pengguna unlimited</li>
+              <li>Semua fitur utama aktif</li>
+              <li>Support 24 jam</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20Premium%20AineBOT." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="badge">Custom</span>
+            <h3>VIP</h3>
+            <div class="price">Rp85.000 <small>/ 30 hari</small></div>
+            <ul>
+              <li>Masa aktif 30 hari</li>
+              <li>Bisa custom sesuai kebutuhan</li>
+              <li>Limit pengguna unlimited</li>
+              <li>Semua fitur utama aktif</li>
+              <li>Support 24 jam</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20VIP%20AineBOT." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-box">
+          <div>
+            <h2>Tentang AineBOT</h2>
+            <p>
+              AineBOT adalah layanan bot WhatsApp untuk membantu aktivitas grup dan komunitas menjadi lebih praktis. Website ini dibuat sebagai landing page statis sehingga bisa langsung dipakai di GitHub Pages.
+            </p>
+          </div>
+
+          <ul class="contact-list" aria-label="Informasi kontak">
+            <li><span>👤 Muhammad Ridwan Reynaldy</span></li>
+            <li><a href="https://wa.me/62895330379186" target="_blank" rel="noopener noreferrer">📱 +62 895-3303-79186</a></li>
+            <li><a href="mailto:anemio100@gmail.com">✉️ anemio100@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <p>© <span id="year"></span> <strong>AineBOT</strong>. All rights reserved.</p>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://github.com/Aiinne" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#pricing">Harga</a>
+        <a href="https://wa.me/6289654360447" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="price-table-wrapper">
-        <div class="pricing-table featured-table">
-            <h2 class="pricing-table__header">- Free Jadibot -</h2>
-            <h3 class="pricing-table__price">Rp. 0</h3>
-            <a target="blank" class="pricing-table__button" href="https://wa.me/6289654360447">
-                Order Now!
-            </a>
-            <ul class="pricing-table__list">
-                <li>3 day free trial</li>
-                <li>no costum</li>
-                <li>1000 limit all member</li>
-                <li>work all features</li>
-                <li>24 hour support</li>
-            </ul>
-        </div>
-        <div class="pricing-table featured-table">
-            <h2 class="pricing-table__header">- Premium -</h2>
-            <h3 class="pricing-table__price">Rp. 45.000</h3>
-            <a target="blank" class="pricing-table__button" href="https://wa.me/6289654360447">
-                Order Now!
-            </a>
-            <ul class="pricing-table__list">
-                <li>30 day</li>
-                <li>no costum</li>
-                <li>unlimited limit</li>
-                <li>work all features</li>
-                <li>24 hour support</li>
-            </ul>
-        </div>
-        <div class="pricing-table featured-table">
-            <h2 class="pricing-table__header">- Vip -</h2>
-            <h3 class="pricing-table__price">Rp. 85.000</h3>
-            <a target="blank" class="pricing-table__button" href="https://wa.me/6289654360447">
-                Order Now!
-            </a>
-            <ul class="pricing-table__list">
-                <li>30 day</li>
-                <li>costum</li>
-                <li>unlimited limit</li>
-                <li>work all features</li>
-                <li>24 hour support</li>
-            </ul>
-        </div>
-    </div>
-    <!-- End of Pricing -->
-
-    <footer>
-        <ul class="container">
-            <li>
-                <strong>Author</strong>
-                <p>Muhammad Ridwan Reynaldy</p>
-            </li>
-            <li>
-                <strong>Phone</strong>
-                <p>+62 895-3303-79186</p>
-            </li>
-            <li>
-                <strong>Email</strong>
-                <p>anemio100@gmail.com</p>
-            </li>
-        </ul>
-    </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-<html>
+</html>
