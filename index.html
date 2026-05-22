@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AineBOT adalah layanan bot WhatsApp dengan paket free trial, premium, dan VIP." />
+  <meta name="description" content="AineBOT adalah layanan bot WhatsApp dengan paket sewa bot, premium, dan sewa server." />
   <meta name="keywords" content="AineBOT, Bot WhatsApp, Sewa Bot WhatsApp, WhatsApp Bot Indonesia" />
   <meta name="author" content="Muhammad Ridwan Reynaldy" />
   <meta name="theme-color" content="#00c2ff" />
 
   <meta property="og:title" content="AineBOT - Sewa Bot WhatsApp" />
-  <meta property="og:description" content="Bot WhatsApp responsif dengan fitur lengkap, limit fleksibel, dan dukungan 24 jam." />
+  <meta property="og:description" content="Bot WhatsApp responsif dengan fitur lengkap, harga terjangkau, dan dukungan 24 jam." />
   <meta property="og:type" content="website" />
 
   <title>AineBOT - Sewa Bot WhatsApp</title>
@@ -22,8 +22,9 @@
       --text: #132033;
       --muted: #65758b;
       --white: #ffffff;
-      --primary: #00c2ff;
-      --primary-dark: #0099d6;
+      --primary: #ff4785; /* Disesuaikan dengan warna tema pink Aine di gambar */
+      --primary-dark: #d62c66;
+      --primary-light: rgba(255, 71, 133, 0.12);
       --border: rgba(15, 23, 42, 0.12);
       --shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
       --radius: 22px;
@@ -77,7 +78,7 @@
     .btn:hover,
     .btn:focus-visible {
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0, 194, 255, 0.24);
+      box-shadow: 0 12px 24px rgba(255, 71, 133, 0.24);
     }
 
     .btn-primary {
@@ -108,7 +109,7 @@
       width: 420px;
       height: 420px;
       border-radius: 50%;
-      background: rgba(0, 194, 255, 0.18);
+      background: rgba(255, 71, 133, 0.18);
       filter: blur(8px);
     }
 
@@ -138,7 +139,7 @@
       place-items: center;
       border-radius: 14px;
       color: var(--white);
-      background: rgba(0, 194, 255, 0.22);
+      background: rgba(255, 71, 133, 0.22);
       border: 1px solid rgba(255, 255, 255, 0.16);
     }
 
@@ -311,7 +312,7 @@
       place-items: center;
       border-radius: 16px;
       color: var(--primary-dark);
-      background: rgba(0, 194, 255, 0.12);
+      background: var(--primary-light);
       font-size: 1.35rem;
     }
 
@@ -346,12 +347,12 @@
 
     .pricing-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(0, 194, 255, 0.36);
+      border-color: rgba(255, 71, 133, 0.36);
       box-shadow: var(--shadow);
     }
 
     .pricing-card.featured {
-      border-color: rgba(0, 194, 255, 0.54);
+      border-color: rgba(255, 71, 133, 0.54);
       box-shadow: var(--shadow);
     }
 
@@ -362,7 +363,7 @@
       padding: 6px 10px;
       border-radius: 999px;
       color: var(--primary-dark);
-      background: rgba(0, 194, 255, 0.12);
+      background: var(--primary-light);
       font-size: 0.82rem;
       font-weight: 800;
     }
@@ -403,7 +404,7 @@
       height: 22px;
       border-radius: 50%;
       color: var(--primary-dark);
-      background: rgba(0, 194, 255, 0.12);
+      background: var(--primary-light);
       font-size: 0.82rem;
       font-weight: 900;
       text-align: center;
@@ -415,8 +416,16 @@
       width: 100%;
     }
 
+    .payment-methods {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
     .about {
-      background: linear-gradient(135deg, #f6f9fc, #eef7fb);
+      background: linear-gradient(135deg, #f6f9fc, #fdf2f6);
     }
 
     .about-box {
@@ -557,7 +566,7 @@
     <nav class="navbar container" aria-label="Navigasi utama">
       <a class="brand" href="#home" aria-label="AineBOT Home">
         <span class="brand-icon" aria-hidden="true">🤖</span>
-        <span>AineBOT</span>
+        <span>Aine Store</span>
       </a>
 
       <ul class="nav-links">
@@ -565,37 +574,37 @@
         <li><a href="#features">Fitur</a></li>
         <li><a href="#pricing">Harga</a></li>
         <li><a href="#about">Tentang</a></li>
-        <li><a href="https://wa.me/6289654360447" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="https://wa.me/62895330379186" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
       </ul>
     </nav>
 
     <section class="hero container" aria-labelledby="hero-title">
       <div>
-        <p class="eyebrow">⚡ Bot WhatsApp siap pakai untuk kebutuhan komunitas dan bisnis</p>
-        <h1 id="hero-title">Sewa <span>Bot WhatsApp</span> yang cepat, stabil, dan mudah digunakan.</h1>
+        <p class="eyebrow">⚡ Layanan Bot & Hosting siap pakai untuk kebutuhanmu</p>
+        <h1 id="hero-title">Sewa <span>Bot & Server</span> dengan harga terbaik dan terpercaya.</h1>
         <p>
-          AineBOT membantu mengelola grup, menjalankan fitur otomatis, dan memberi pengalaman yang lebih praktis untuk pengguna WhatsApp.
+          Aine Store menyediakan penyewaan Bot WhatsApp responsif dan Server Hosting berperforma tinggi dengan dukungan metode pembayaran online yang lengkap.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20sewa%20Bot%20WhatsApp." target="_blank" rel="noopener noreferrer">Order Sekarang</a>
+          <a class="btn btn-primary" href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20tanya%20seputar%20sewa%20Bot/Server." target="_blank" rel="noopener noreferrer">Order Sekarang</a>
           <a class="btn btn-outline" href="#pricing">Lihat Paket</a>
         </div>
       </div>
 
       <aside class="hero-card" aria-label="Ringkasan layanan AineBOT">
-        <h2>Kenapa AineBOT?</h2>
+        <h2>Kenapa Memilih Aine?</h2>
         <dl class="stats">
           <div class="stat">
+            <dt>Harga</dt>
+            <dd><strong>Terjangkau</strong><br><span>Mulai dari 15k/Bulan</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Payment</dt>
+            <dd><strong>Lengkap</strong><br><span>QRIS, E-Wallet & Bank</span></dd>
+          </div>
+          <div class="stat">
             <dt>Support</dt>
-            <dd><strong>24 Jam</strong><br><span>Bantuan aktif saat diperlukan</span></dd>
-          </div>
-          <div class="stat">
-            <dt>Limit</dt>
-            <dd><strong>Fleksibel</strong><br><span>Tersedia paket trial sampai VIP</span></dd>
-          </div>
-          <div class="stat">
-            <dt>Fitur</dt>
-            <dd><strong>Lengkap</strong><br><span>Cocok untuk grup dan komunitas</span></dd>
+            <dd><strong>Aktif</strong><br><span>Bantuan langsung via WA</span></dd>
           </div>
         </dl>
       </aside>
@@ -606,27 +615,27 @@
     <section class="features" id="features">
       <div class="container">
         <div class="section-header">
-          <h2>Fitur utama</h2>
-          <p>Paket dibuat sederhana agar mudah dipilih, namun tetap mendukung kebutuhan penggunaan harian.</p>
+          <h2>Layanan Kami</h2>
+          <p>Solusi praktis untuk mengelola grup WhatsApp dan menjaga bot kamu tetap online 24/7.</p>
         </div>
 
         <div class="features-grid">
           <article class="feature-card">
-            <div class="icon" aria-hidden="true">⚙️</div>
-            <h3>Otomatisasi Grup</h3>
-            <p>Membantu menjalankan perintah, limit pengguna, dan fitur bot secara otomatis di WhatsApp.</p>
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3>Sewa Bot WhatsApp</h3>
+            <p>Bot pintar dengan berbagai fitur menarik, mulai dari downloader, AI, hingga tools moderasi grup.</p>
           </article>
 
           <article class="feature-card">
-            <div class="icon" aria-hidden="true">🚀</div>
-            <h3>Siap Digunakan</h3>
-            <p>Tidak perlu membuat sistem dari nol. Pilih paket, hubungi admin, dan bot siap diaktifkan.</p>
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3>Sewa Server (Hosting)</h3>
+            <p>Server khusus yang stabil dan online 24 jam untuk menjalankan script bot milikmu sendiri.</p>
           </article>
 
           <article class="feature-card">
-            <div class="icon" aria-hidden="true">🛡️</div>
-            <h3>Dukungan Admin</h3>
-            <p>Dapatkan bantuan untuk aktivasi, pemakaian, dan pengaturan sesuai paket yang dipilih.</p>
+            <div class="icon" aria-hidden="true">💳</div>
+            <h3>Payment Otomatis</h3>
+            <p>Mendukung metode pembayaran online seperti DANA, Gopay, QRIS, LinkAja, ShopeePay, PayPal, dll.</p>
           </article>
         </div>
       </div>
@@ -635,52 +644,58 @@
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="section-header">
-          <h2>Paket harga</h2>
-          <p>Pilih paket sewa server dan bot yang paling cocok untuk kebutuhan kamu.</p>
+          <h2>Paket Aine Store</h2>
+          <p>Pilih paket langganan yang sesuai dengan kebutuhan komunitas atau bisnismu.</p>
         </div>
 
         <div class="pricing-grid">
+          
           <article class="pricing-card">
-            <span class="badge">Trial</span>
-            <h3>Free Jadibot</h3>
-            <div class="price">Rp0 <small>/ 3 hari</small></div>
+            <span class="badge">Standar</span>
+            <h3>Sewa Bot</h3>
+            <div class="price">Rp15.000 <small>/ Bulan</small></div>
             <ul>
-              <li>Trial gratis selama 3 hari</li>
-              <li>Tanpa custom fitur</li>
-              <li>1.000 limit untuk semua member</li>
-              <li>Semua fitur utama aktif</li>
-              <li>Support 24 jam</li>
+              <li><strong>1 Bulan:</strong> Rp 15.000</li>
+              <li><strong>4 Bulan:</strong> Rp 50.000</li>
+              <li><strong>1 Tahun (Normal):</strong> Rp 150.000</li>
+              <li>Fitur Bot Lengkap</li>
+              <li>Via Online Payment</li>
             </ul>
-            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20Free%20Jadibot." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+            <a class="btn btn-primary" href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20Sewa%20Bot%20Paket%20Bulanan." target="_blank" rel="noopener noreferrer">Order Sekarang</a>
           </article>
 
           <article class="pricing-card featured">
-            <span class="badge">Paling populer</span>
-            <h3>Premium</h3>
-            <div class="price">Rp45.000 <small>/ 30 hari</small></div>
+            <span class="badge">HARGA DISKON 🔥</span>
+            <h3>Sewa Bot Tahunan</h3>
+            <div class="price">Rp100.000 <small>/ Setahun</small></div>
             <ul>
-              <li>Masa aktif 30 hari</li>
-              <li>Tanpa custom fitur</li>
-              <li>Limit pengguna unlimited</li>
-              <li>Semua fitur utama aktif</li>
-              <li>Support 24 jam</li>
+              <li>Masa aktif full <strong>1 Tahun</strong></li>
+              <li>Akses Fitur <strong>Premium</strong></li>
+              <li>Lebih hemat Rp 50.000</li>
+              <li>Prioritas Support</li>
+              <li>Via Online Payment</li>
             </ul>
-            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20Premium%20AineBOT." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+            <a class="btn btn-primary" href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20Sewa%20Bot%20Paket%20Diskon%201%20Tahun%20%2B%20Premium." target="_blank" rel="noopener noreferrer">Ambil Diskon Ini</a>
           </article>
 
           <article class="pricing-card">
-            <span class="badge">Custom</span>
-            <h3>VIP</h3>
-            <div class="price">Rp85.000 <small>/ 30 hari</small></div>
+            <span class="badge">Hosting</span>
+            <h3>Sewa Server</h3>
+            <div class="price">Rp80.000 <small>/ Bulan</small></div>
             <ul>
-              <li>Masa aktif 30 hari</li>
-              <li>Bisa custom sesuai kebutuhan</li>
-              <li>Limit pengguna unlimited</li>
-              <li>Semua fitur utama aktif</li>
-              <li>Support 24 jam</li>
+              <li>Server Standby 24/7</li>
+              <li>Performa Cepat & Stabil</li>
+              <li>Akses Panel/Panel Pterodactyl</li>
+              <li>Bisa untuk Bot Sendiri</li>
+              <li>Via Online Payment</li>
             </ul>
-            <a class="btn btn-primary" href="https://wa.me/6289654360447?text=Halo%20AINE%2C%20saya%20ingin%20paket%20VIP%20AineBOT." target="_blank" rel="noopener noreferrer">Pilih Paket</a>
+            <a class="btn btn-primary" href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20Sewa%20Server%20Bot." target="_blank" rel="noopener noreferrer">Order Sekarang</a>
           </article>
+
+        </div>
+
+        <div class="payment-methods">
+          ✅ Menerima Pembayaran: DANA, Gopay, QRIS, LinkAja, SeaBank, Jago, ShopeePay, OVO, PayPal, Flip & Superbank.
         </div>
       </div>
     </section>
@@ -689,14 +704,14 @@
       <div class="container">
         <div class="about-box">
           <div>
-            <h2>Tentang AineBOT</h2>
+            <h2>Tentang Aine Store</h2>
             <p>
-              AineBOT adalah layanan bot WhatsApp untuk membantu aktivitas grup dan komunitas menjadi lebih praktis. Website ini dibuat sebagai landing page statis sehingga bisa langsung dipakai di GitHub Pages.
+              Aine Store menyediakan penyewaan Bot WhatsApp dan Server yang bisa diandalkan. Transaksi cepat, aman, dan didukung dengan berbagai metode pembayaran digital di Indonesia.
             </p>
           </div>
 
           <ul class="contact-list" aria-label="Informasi kontak">
-            <li><span>👤 Muhammad Ridwan Reynaldy</span></li>
+            <li><span>👤 Aine (Owner)</span></li>
             <li><a href="https://wa.me/62895330379186" target="_blank" rel="noopener noreferrer">📱 +62 895-3303-79186</a></li>
             <li><a href="mailto:anemio100@gmail.com">✉️ anemio100@gmail.com</a></li>
           </ul>
@@ -707,11 +722,11 @@
 
   <footer class="site-footer">
     <div class="footer-inner container">
-      <p>© <span id="year"></span> <strong>AineBOT</strong>. All rights reserved.</p>
+      <p>© <span id="year"></span> <strong>Aine Store</strong>. All rights reserved.</p>
       <div class="footer-links" aria-label="Footer links">
         <a href="https://github.com/Aiinne" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="#pricing">Harga</a>
-        <a href="https://wa.me/6289654360447" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://wa.me/62895330379186" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
   </footer>
