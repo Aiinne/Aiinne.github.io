@@ -8,7 +8,6 @@
   <meta name="author" content="Muhammad Ridwan Reynaldy" />
   <meta name="theme-color" content="#ff4785" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://github.com/Aiinne" />
   <meta property="og:title" content="Aine Store - Premium WhatsApp Bot & Server Hosting" />
@@ -17,7 +16,6 @@
 
   <title>Aine Store - Premium WhatsApp Bot & Server Hosting</title>
 
-  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -467,7 +465,7 @@
     }
 
     /* ==========================================================================
-       7. PERATURAN PENGGUNAAN BOT AINE SECTION (ELEGANT LEGAL GRID)
+       7. TERMS OF SERVICE / PERATURAN PENGGUNAAN BOT (ELEGANT LEGAL GRID)
        ========================================================================== */
     .rules-section {
       background-color: #ffffff;
@@ -506,11 +504,12 @@
       display: grid;
       place-items: center;
       flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(255, 71, 133, 0.2);
     }
 
     .rule-body h4 {
       font-size: 1.1rem;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--text-main);
       margin-bottom: 8px;
       letter-spacing: -0.01em;
@@ -520,6 +519,16 @@
       font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.6;
+    }
+
+    .rule-body code {
+      background-color: rgba(255, 71, 133, 0.1);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: 600;
+      font-size: 0.85rem;
     }
 
     .rules-footer-notice {
@@ -537,7 +546,7 @@
     }
 
     /* ==========================================================================
-       8. PRICING TIERS SECTION (SENADA DENGAN GAMBAR BROSUR)
+       8. PRICING TIERS SECTION
        ========================================================================== */
     .pricing-section {
       background-color: var(--bg-main);
@@ -661,7 +670,7 @@
     }
 
     .payment-title {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.95rem;
       color: var(--text-main);
     }
@@ -670,17 +679,19 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 16px;
+      justify-content: center;
+      gap: 12px;
       font-size: 0.85rem;
       font-weight: 700;
       color: var(--text-muted);
     }
 
     .payment-badge {
-      padding: 4px 10px;
+      padding: 6px 12px;
       background-color: #f1f5f9;
-      border-radius: 6px;
-      border: 1px solid rgba(0,0,0,0.03);
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     }
 
     /* ==========================================================================
@@ -870,10 +881,6 @@
     /* ==========================================================================
        12. ABOUT / FOOTER CONTAINER
        ========================================================================== */
-    .about-section {
-      background-color: #f1f5f9;
-    }
-
     .footer-pro {
       background-color: var(--bg-dark);
       color: rgba(255, 255, 255, 0.65);
@@ -947,7 +954,7 @@
        13. RESPONSIVE MEDIA QUERIES
        ========================================================================== */
     @media (max-width: 1024px) {
-      .hero-grid, .rules-grid-pro, .about-box {
+      .hero-grid, .rules-grid-pro {
         grid-template-columns: 1fr;
         gap: 50px;
       }
@@ -975,12 +982,14 @@
         gap: 20px;
       }
       .section-padding { padding-block: 70px; }
+      .rules-footer-notice { margin-top: 10px; }
     }
 
     @media (max-width: 480px) {
       .stats-grid { grid-template-columns: 1fr; }
       .hero-btn-group .btn { width: 100%; }
       .pricing-card-pro { padding: 30px 20px; }
+      .rule-card { flex-direction: column; gap: 14px; }
     }
 
     @keyframes pulse {
@@ -992,7 +1001,6 @@
 </head>
 <body>
 
-  <!-- LAYER NAVIGASI UTAMA -->
   <header class="header-nav">
     <nav class="navbar container" aria-label="Navigasi Utama Aine Store">
       <a class="brand-logo" href="#home">
@@ -1010,11 +1018,9 @@
     </nav>
   </header>
 
-  <!-- LAYER HERO BANNER DENGAN SIMULATOR INTEGRASI -->
   <section class="hero-wrapper" id="home">
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="badge badge-primary" style="color: #ffffff; background-color: rgba(255,255,255,0.1); margin-bottom: 20px;">Release V3.5 Professional</span>
         <h1>Kelola Komunitas & Grup dengan <span>Automated Bot</span></h1>
         <p>Aine Store menyediakan ekosistem terlengkap untuk WhatsApp Bot Automation & High-Performance Server Hosting. Cepat, tangguh, stabil, dan siap mendongkrak fungsionalitas obrolan Anda.</p>
         <div class="hero-btn-group">
@@ -1023,7 +1029,6 @@
         </div>
       </div>
       
-      <!-- Live Chat Simulator Component Block -->
       <div class="chat-simulator" aria-hidden="true">
         <div class="chat-header">
           <div class="avatar-bot">🤖</div>
@@ -1053,7 +1058,6 @@
     </div>
   </section>
 
-  <!-- LAYER DASHBOARD COUNTER STATS -->
   <section class="dashboard-stats">
     <div class="container stats-grid">
       <div class="stat-item">
@@ -1075,8 +1079,7 @@
     </div>
   </section>
 
-  <!-- LAYER FITUR CORE UTAMA -->
-  <section class="features-section" id="features">
+  <section class="features-section section-padding" id="features">
     <div class="container">
       <div class="section-header">
         <span class="badge badge-primary">High Tier Technology</span>
@@ -1136,12 +1139,11 @@
     </div>
   </section>
 
-  <!-- LAYER SYARAT & KETENTUAN PERATURAN PENGGUNAAN BOT AINE -->
-  <section class="rules-section" id="rules">
+  <section class="rules-section section-padding" id="rules">
     <div class="container">
       <div class="section-header">
         <span class="badge badge-primary">Legal & Compliance</span>
-        <h2>Syarat & Ketentuan Peraturan Penggunaan Bot Aine</h2>
+        <h2>Ketentuan Layanan & Regulasi Bot</h2>
         <p>Harap baca dan pahami seluruh poin regulasi di bawah ini demi kenyamanan, keamanan, dan kelancaran bersama selama menggunakan sistem operasional kami.</p>
       </div>
 
@@ -1150,157 +1152,156 @@
         <div class="rule-card">
           <div class="rule-index">1</div>
           <div class="rule-body">
-            <h4>Akses Data Pengguna</h4>
-            <p>Bot mungkin mengakses data tertentu, seperti nama pengguna dan nomor telepon, untuk memberikan layanan. Data akan disimpan dengan aman dan tidak dibagikan tanpa izin Anda.</p>
+            <h4>Akses & Penyimpanan Data</h4>
+            <p>Kami mungkin mengumpulkan data dasar seperti nama pengguna dan nomor telepon untuk keperluan operasional. Data tersebut dienkripsi secara aman dan tidak akan didistribusikan tanpa persetujuan Anda.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">2</div>
           <div class="rule-body">
-            <h4>Penghapusan Data</h4>
-            <p>Data Anda akan dihapus jika terjadi masalah pada database yang memerlukan penghapusan massal.</p>
+            <h4>Penghapusan Data Massal</h4>
+            <p>Demi menjaga performa, kami berhak melakukan pembersihan basis data secara berkala, yang dapat mengakibatkan penghapusan riwayat data pengguna.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">3</div>
           <div class="rule-body">
-            <h4>Kebijakan Media</h4>
-            <p>Bot tidak menyimpan gambar, video, file, audio, atau dokumen yang Anda kirimkan.</p>
+            <h4>Privasi Media (No-Log Policy)</h4>
+            <p>Sistem kami dirancang untuk tidak menyimpan media apa pun. Seluruh gambar, video, file, maupun dokumen yang Anda kirimkan langsung dihapus permanen dari server setelah diproses.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">4</div>
           <div class="rule-body">
-            <h4>Privasi Pengguna</h4>
-            <p>Bot tidak meminta informasi pribadi. Harap waspada terhadap penipuan.</p>
+            <h4>Keamanan Informasi Pribadi</h4>
+            <p>Tim Aine Store tidak akan pernah meminta informasi pribadi atau kredensial sensitif Anda. Harap berhati-hati terhadap segala bentuk upaya penipuan.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">5</div>
           <div class="rule-body">
-            <h4>Pelaporan Masalah</h4>
-            <p>Laporkan bug atau error kepada pemilik (Owner) bot.</p>
+            <h4>Pelaporan Bug & Anomali</h4>
+            <p>Pengguna dihimbau untuk segera melaporkan segala bentuk anomali, bug, atau error yang ditemukan pada sistem kepada tim pengembang (Owner) untuk perbaikan.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">6</div>
           <div class="rule-body">
-            <h4>Respon Bot</h4>
-            <p>Kirimkan perintah sekali. Jika tidak merespons, ulangi. Jika tetap tidak merespons, bot mungkin sedang offline.</p>
+            <h4>Ketersediaan Layanan (Uptime)</h4>
+            <p>Kirimkan perintah cukup satu kali. Jika tidak ada respons, harap tunggu. Kegagalan respons secara terus-menerus mengindikasikan bot sedang dalam jadwal pemeliharaan (offline).</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">7</div>
           <div class="rule-body">
-            <h4>Spam & Penyalahgunaan</h4>
-            <p>Dilarang melakukan spam, membagikan virus/virtex, melakukan panggilan (telepon/video), atau mengirim chat pribadi tanpa izin. Pelanggaran akan menyebabkan akun Anda diblokir.</p>
+            <h4>Larangan Spam & Penyalahgunaan</h4>
+            <p>Dilarang keras melakukan aktivitas spam, menyebarkan perangkat lunak berbahaya (virtex/malware), atau melakukan panggilan (voice/video call) ke nomor bot.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">8</div>
           <div class="rule-body">
-            <h4>Penghapusan Access</h4>
-            <p>Pengguna yang menendang bot dari grup (baik karena durasi berakhir atau sengaja) tidak berhak atas refund.</p>
+            <h4>Kebijakan Penghentian (No Refund)</h4>
+            <p>Tindakan mengeluarkan (kick) bot dari grup—baik secara sengaja maupun tidak, atau karena masa sewa berakhir—akan menghanguskan sisa masa aktif. Tidak berlaku pengembalian dana (refund).</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">9</div>
           <div class="rule-body">
-            <h4>Keterlibatan Admin/Owner</h4>
-            <p>Admin atau Owner dapat memantau aktivitas bot untuk memastikan kelancaran layanan.</p>
+            <h4>Pengawasan Sistem (Monitoring)</h4>
+            <p>Tim Admin/Owner berhak memantau log aktivitas operasi bot secara berkala guna memastikan stabilitas server dan kepatuhan pengguna terhadap aturan layanan.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">10</div>
           <div class="rule-body">
-            <h4>Penyewaan Bot</h4>
-            <p>Akses bot di grup hanya melalui sistem sewa. Tidak ada permintaan gratis.</p>
+            <h4>Sistem Penyewaan Eksklusif</h4>
+            <p>Layanan bot pada grup beroperasi secara mutlak melalui sistem sewa resmi. Kami tidak memproses permintaan pengaktifan grup secara gratis.</p>
           </div>
         </div>
 
         <div class="rule-card" style="grid-column: span 2;">
           <div class="rule-index">11</div>
           <div class="rule-body">
-            <h4>Pelanggaran Syarat & Ketentuan</h4>
-            <p>Pengelola berhak menghentikan akses pengguna yang melanggar peraturan atau menggunakan bot dengan cara yang tidak sesuai dengan syarat dan ketentuan. Jika pelanggaran dilakukan secara serius, seperti penyalahgunaan bot untuk tujuan ilegal, merusak sistem, atau melanggar hukum, kami akan memblokir akses secara permanen tanpa pemberitahuan sebelumnya. Pelaporan kepada pihak berwenang dapat dilakukan jika pelanggaran dianggap merugikan secara hukum atau melibatkan kejahatan siber.</p>
+            <h4>Penindakan Pelanggaran Berat</h4>
+            <p>Segala bentuk pelanggaran hukum, eksploitasi celah, atau penggunaan bot yang melanggar ketentuan akan ditindak dengan pemblokiran permanen sepihak tanpa pemberitahuan sebelumnya. Pelaporan kepada pihak berwenang dapat dilakukan jika pelanggaran berpotensi melibatkan tindak kejahatan siber.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">12</div>
           <div class="rule-body">
-            <h4>Spam Command</h4>
-            <p>Spam perintah akan dikenakan ban sementara selama 5 jam.</p>
+            <h4>Sanksi Spam Command</h4>
+            <p>Sistem otomatis dilengkapi dengan pembatas laju (rate-limiter). Melakukan spam perintah secara berlebihan akan dikenakan sanksi <i>banned</i> sistem sementara selama 5 jam.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">13</div>
           <div class="rule-body">
-            <h4>Kehadiran afk & kick bot</h4>
-            <p>Pengguna yang afk lebih dari 3 hari akan diblokir otomatis. Pengguna yang mengkick bot dengan sengaja ataupun tidak sengaja system otomatis memblockir pengguna tersebut.</p>
+            <h4>Inaktivitas & Pengeluaran Bot</h4>
+            <p>Akun pengguna yang tidak aktif (AFK) lebih dari 3 hari berisiko diblokir otomatis. Begitu pula bagi pengguna yang terdeteksi mengeluarkan bot dari suatu grup.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">14</div>
           <div class="rule-body">
-            <h4>Pembukaan Blokir & Banned</h4>
-            <p>Denda Rp 2.678,- untuk membuka blokir (Gunakan perintah: <code>/bayarunblock</code>). Denda Rp 1.567,- untuk membuka banned (Gunakan perintah: <code>/bayarunbanned</code>).</p>
+            <h4>Sanksi & Denda Administratif</h4>
+            <p>Pencabutan sanksi akan dikenakan denda pemulihan sistem: Rp 2.678,- untuk membuka akses blokir (Gunakan <code>/bayarunblock</code>), dan Rp 1.567,- untuk membuka sanksi banned (Gunakan <code>/bayarunbanned</code>).</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">15</div>
           <div class="rule-body">
-            <h4>Layanan Premium</h4>
-            <p>Gunakan perintah <code>/bayarpremium</code> untuk aktivasi akun premium dan <code>/bayarpremiumgroup</code> untuk group premium. Pengguna/group premium tidak dikenakan sanksi banned 5 jam, mendapatkan unlimited limit, serta membuka akses seluruh fitur.</p>
+            <h4>Ketentuan Layanan Premium</h4>
+            <p>Aktivasi Premium (<code>/bayarpremium</code> atau <code>/bayarpremiumgroup</code>) memberikan kekebalan dari sanksi banned 5 jam, mendapatkan kuota perintah tak terbatas (unlimited limit), serta membuka akses terhadap fitur eksklusif.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">16</div>
           <div class="rule-body">
-            <h4>Pembelian Limit</h4>
-            <p>Gunakan perintah <code>/bayarlimit</code> untuk membeli kuota limit penggunaan tambahan.</p>
+            <h4>Pembelian Kuota (Limit)</h4>
+            <p>Kuota penggunaan reguler dapat ditambah sewaktu-waktu melalui sistem tagihan otomatis menggunakan perintah <code>/bayarlimit</code>.</p>
           </div>
         </div>
 
         <div class="rule-card">
           <div class="rule-index">17</div>
           <div class="rule-body">
-            <h4>Perpanjangan Durasi</h4>
-            <p>Gunakan perintah <code>/bayarexpired</code> untuk memperpanjang durasi keaktifan bot di dalam grup.</p>
+            <h4>Perpanjangan Masa Aktif</h4>
+            <p>Gunakan perintah <code>/bayarexpired</code> untuk memperpanjang durasi keaktifan bot di dalam grup Anda secara otomatis sebelum masa tenggang berakhir.</p>
           </div>
         </div>
 
         <div class="rule-card" style="grid-column: span 2;">
           <div class="rule-index">18</div>
           <div class="rule-body">
-            <h4>Penolakan Tanggung Jawab</h4>
-            <p>Segala perintah melalui bot adalah tanggung jawab pengguna sepenuhnya. Kami pihak pengembang tidak bertanggung jawab atas segala konsekuensi atau kerugian yang ditimbulkan akibat penyalahgunaan perintah tersebut.</p>
+            <h4>Penolakan Tanggung Jawab (Disclaimer)</h4>
+            <p>Seluruh dampak dari perintah yang dieksekusi melalui layanan bot ini merupakan tanggung jawab pengguna sepenuhnya. Kami selaku pihak pengembang terlepas dari segala tuntutan atas kerugian materil maupun imateril.</p>
           </div>
         </div>
 
         <div class="rules-footer-notice">
-          _Mohon patuhi peraturan ini agar pengalaman menggunakan bot tetap lancar dan menyenangkan. Terima kasih! 😊_
+          Dengan tetap menggunakan layanan bot ini, Anda dianggap telah menyetujui seluruh Syarat dan Ketentuan (ToS) di atas.
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- LAYER PAKET PRICING (MENGIKUTI DAN DIUBAH SESUAI GAMBAR ASLI BROSUR AINE STORE) -->
-  <section class="pricing-section" id="pricing">
+  <section class="pricing-section section-padding" id="pricing">
     <div class="container">
       <div class="section-header">
         <span class="badge badge-primary">Official Rate Card</span>
@@ -1310,7 +1311,6 @@
 
       <div class="pricing-grid-pro">
         
-        <!-- PAKET 1: SEWA BOT BULANAN -->
         <div class="pricing-card-pro">
           <span class="badge" style="color: #64748b; background-color: #f1f5f9;">Regular Tier</span>
           <h3>Sewa Bot (Regular)</h3>
@@ -1329,7 +1329,6 @@
           <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20sewa%20bot%20paket%20Regular%20(15k/bulan)." target="_blank" class="btn btn-secondary">Hubungi Admin</a>
         </div>
 
-        <!-- PAKET 2: DISKON TAHUNAN + PREMIUM (FEATURED SEPERTI DI PAMFLET) -->
         <div class="pricing-card-pro featured">
           <div class="ribbon">Best Deal</div>
           <span class="badge badge-discount">Harga Diskon 🔥</span>
@@ -1349,7 +1348,6 @@
           <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20mau%20ambil%20PAKET%20DISKON%20TAHUNAN%20100K%20%2B%20PREMIUM." target="_blank" class="btn btn-primary">Ambil Paket Diskon</a>
         </div>
 
-        <!-- PAKET 3: SEWA SERVER BULANAN -->
         <div class="pricing-card-pro">
           <span class="badge badge-server">Infrastructure Tier</span>
           <h3>Sewa Server Hosting</h3>
@@ -1360,7 +1358,7 @@
           </div>
           <ul class="features-list">
             <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Server High-Performance 24/7</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Kases Full Panel Pterodactyl</li>
+            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Akses Full Panel Pterodactyl</li>
             <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Garansi Network Cepat &amp; Anti-Lag</li>
             <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Pengaturan Port Mandiri Terbuka</li>
             <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Via Online Payment Terintegrasi</li>
@@ -1370,7 +1368,6 @@
 
       </div>
 
-      <!-- Informasi Gerbang Pembayaran Sesuai Brosur -->
       <div class="payment-notice-banner">
         <div class="payment-title">💳 INTEGRATED CHANNELS ONLINE PAYMENT :</div>
         <div class="payment-logos">
@@ -1390,8 +1387,7 @@
     </div>
   </section>
 
-  <!-- LAYER ALUR CARA ORDER -->
-  <section class="flow-section">
+  <section class="flow-section section-padding">
     <div class="container">
       <div class="section-header">
         <h2>3 Langkah Mudah Memulai</h2>
@@ -1418,8 +1414,7 @@
     </div>
   </section>
 
-  <!-- LAYER REAL TESTIMONIAL PENGGUNA -->
-  <section class="testimonials-section">
+  <section class="testimonials-section section-padding">
     <div class="container">
       <div class="section-header">
         <h2>Dipercaya Oleh Ratusan Pengelola Grup</h2>
@@ -1441,7 +1436,7 @@
 
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p>"Fitur transkripsi audio (.totext) sangat menoleh ketika saya sibuk di kantor dan tidak sempat mendengarkan rekaman VN yang panjang."</p>
+          <p>"Fitur transkripsi audio (.totext) sangat menolong ketika saya sibuk di kantor dan tidak sempat mendengarkan rekaman VN yang panjang."</p>
           <div class="testi-profile">
             <div class="testi-avatar">A</div>
             <div class="testi-info">
@@ -1466,8 +1461,7 @@
     </div>
   </section>
 
-  <!-- LAYER FAQ SYSTEM -->
-  <section class="faq-section" id="faq">
+  <section class="faq-section section-padding" id="faq">
     <div class="container">
       <div class="section-header">
         <h2>Pertanyaan yang Sering Diajukan</h2>
@@ -1512,7 +1506,6 @@
     </div>
   </section>
 
-  <!-- PREMIUM FOOTER UTAMA -->
   <footer class="footer-pro">
     <div class="container footer-grid-main">
       <div class="footer-col">
