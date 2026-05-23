@@ -4,52 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aine Store - Layanan Penyewaan Bot WhatsApp Otomatis Premium & High-Performance Server Hosting Terpercaya." />
-  <meta name="keywords" content="Aine Store, AineBOT, Bot WhatsApp, Sewa Bot WhatsApp, Server Pterodactyl, Hosting Bot, WhatsApp Bot Indonesia, Peraturan Bot Aine" />
+  <meta name="keywords" content="Aine Store, AineBOT, bot WhatsApp, sewa bot WhatsApp, server Pterodactyl, hosting bot, WhatsApp bot Indonesia" />
   <meta name="author" content="Muhammad Ridwan Reynaldy" />
   <meta name="theme-color" content="#ff4785" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://github.com/Aiinne" />
   <meta property="og:title" content="Aine Store - Premium WhatsApp Bot & Server Hosting" />
-  <meta property="og:description" content="Tingkatkan produktivitas grup Anda dengan Bot WhatsApp otomatis terlengkap dan peraturan penggunaan yang transparan." />
+  <meta property="og:description" content="Bot WhatsApp otomatis dengan fitur lengkap, sistem sewa transparan, dan dukungan server hosting stabil." />
   <meta property="og:image" content="https://telegra.ph/file/15949d8a573663b0a790d.jpg" />
 
   <title>Aine Store - Premium WhatsApp Bot & Server Hosting</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <style>
-    /* ==========================================================================
-       1. VARIABLES & CORE STYLES
-       ========================================================================== */
     :root {
       --bg-main: #f8fafc;
       --bg-dark: #090d16;
       --bg-card: #ffffff;
       --text-main: #0f172a;
       --text-muted: #475569;
+      --text-soft: #64748b;
       --text-white: #ffffff;
-      
-      /* Pink Crimson Brand Theme Matching Aine Mascot Chart */
       --primary: #ff4785;
       --primary-dark: #e0316e;
-      --primary-light: rgba(255, 71, 133, 0.08);
+      --primary-soft: rgba(255, 71, 133, 0.1);
       --primary-gradient: linear-gradient(135deg, #ff4785 0%, #cb1b5b 100%);
-      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
-      
-      --border-color: rgba(15, 23, 42, 0.08);
-      --border-dark: rgba(255, 255, 255, 0.08);
-      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 12px 20px -3px rgba(15, 23, 42, 0.06), 0 4px 12px -4px rgba(15, 23, 42, 0.06);
-      --shadow-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
-      
-      --radius-sm: 12px;
-      --radius-md: 20px;
-      --radius-lg: 30px;
+      --border-color: rgba(15, 23, 42, 0.09);
+      --border-dark: rgba(255, 255, 255, 0.1);
+      --shadow-sm: 0 4px 10px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 26px 70px rgba(15, 23, 42, 0.16);
+      --radius-sm: 14px;
+      --radius-md: 22px;
       --max-width: 1200px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition: all 0.25s ease;
     }
 
     * {
@@ -63,9 +55,10 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-width: 320px;
       color: var(--text-main);
-      background-color: var(--bg-main);
+      background: var(--bg-main);
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -80,49 +73,63 @@
       list-style: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
+    code {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 7px;
+      color: var(--primary-dark);
+      background: rgba(255, 71, 133, 0.1);
+      font: 700 0.86em ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
 
-    /* ==========================================================================
-       2. REUSABLE COMPONENTS
-       ========================================================================== */
     .container {
       width: min(100% - 40px, var(--max-width));
       margin-inline: auto;
     }
 
     .section-padding {
-      padding-block: 100px;
+      padding-block: 96px;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      justify-content: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 7px 14px;
       border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
     .badge-primary {
-      color: var(--primary);
-      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      background: var(--primary-soft);
+    }
+
+    .badge-dark {
+      color: #e2e8f0;
+      border: 1px solid var(--border-dark);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .badge-discount {
       color: #ffffff;
       background: linear-gradient(90deg, #f43f5e, #e11d48);
-      animation: pulse 2s infinite;
+      box-shadow: 0 10px 22px rgba(225, 29, 72, 0.22);
     }
 
     .badge-server {
-      color: #0284c7;
-      background-color: rgba(2, 132, 199, 0.1);
+      color: #0369a1;
+      background: rgba(2, 132, 199, 0.1);
+    }
+
+    .badge-regular {
+      color: #64748b;
+      background: #f1f5f9;
     }
 
     .btn {
@@ -130,97 +137,94 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 14px 28px;
-      border-radius: 999px;
+      padding: 14px 26px;
       border: 2px solid transparent;
+      border-radius: 999px;
+      font-size: 0.94rem;
+      font-weight: 800;
       cursor: pointer;
       transition: var(--transition);
     }
 
     .btn-primary {
-      color: var(--text-white);
+      color: #ffffff;
       background: var(--primary-gradient);
+      box-shadow: 0 14px 28px rgba(255, 71, 133, 0.24);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 71, 133, 0.4);
+      box-shadow: 0 20px 34px rgba(255, 71, 133, 0.32);
     }
 
     .btn-outline {
-      color: var(--text-white);
-      border-color: rgba(255, 255, 255, 0.2);
-      background-color: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.06);
       backdrop-filter: blur(10px);
     }
 
     .btn-outline:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.4);
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.13);
       transform: translateY(-3px);
     }
 
     .btn-secondary {
       color: var(--text-main);
-      background-color: var(--bg-card);
       border-color: var(--border-color);
+      background: var(--bg-card);
       box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover {
+      color: var(--primary-dark);
       border-color: var(--primary);
-      color: var(--primary);
       transform: translateY(-2px);
     }
 
     .section-header {
+      max-width: 760px;
+      margin: 0 auto 58px;
       text-align: center;
-      max-width: 750px;
-      margin: 0 auto 60px;
     }
 
     .section-header h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-block: 13px 16px;
+      font-size: clamp(2rem, 4vw, 2.85rem);
       font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      margin-block: 12px 16px;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
     }
 
     .section-header p {
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.06rem;
     }
 
-    /* ==========================================================================
-       3. NAVIGATION BAR
-       ========================================================================== */
     .header-nav {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0 0 auto;
+      z-index: 10;
       width: 100%;
-      z-index: 100;
-      background-color: transparent;
     }
 
     .navbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
       padding-block: 24px;
     }
 
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-size: 1.4rem;
+      color: var(--text-white);
+      font-size: 1.35rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: var(--text-white);
     }
 
     .brand-logo svg {
@@ -232,546 +236,559 @@
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
     .nav-item {
-      padding: 10px 18px;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
       border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.93rem;
+      font-weight: 700;
     }
 
-    .nav-item:hover, .nav-item.active {
+    .nav-item:hover,
+    .nav-item.active {
       color: var(--text-white);
-      background-color: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
 
-    /* ==========================================================================
-       4. HERO SECTION WITH INTEGRATION SIMULATOR
-       ========================================================================== */
+    .nav-contact {
+      color: var(--primary);
+    }
+
+    /* Hero Section yang difokuskan (Tanpa Simulator) */
     .hero-wrapper {
       position: relative;
-      background-color: var(--bg-dark);
-      color: var(--text-white);
-      padding-block: 160px 120px;
       overflow: hidden;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(255, 71, 133, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 45%);
+      padding-block: 164px 116px;
+      color: var(--text-white);
+      background-color: var(--bg-dark);
+      background-image:
+        radial-gradient(circle at 12% 18%, rgba(255, 71, 133, 0.18) 0%, transparent 38%),
+        radial-gradient(circle at 85% 82%, rgba(56, 189, 248, 0.14) 0%, transparent 42%);
+    }
+
+    .hero-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -32% -10%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255, 71, 133, 0.18), transparent 64%);
+      pointer-events: none;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
+      gap: 30px;
     }
 
     .hero-content h1 {
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      max-width: 800px;
+      margin-inline: auto;
+      font-size: clamp(2.55rem, 6vw, 4.8rem);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.04em;
+      line-height: 1.08;
+      letter-spacing: -0.05em;
     }
 
     .hero-content h1 span {
-      background: linear-gradient(90deg, #ff4785, #ff7ba4);
+      background: linear-gradient(90deg, #ff4785, #ff8bb1);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero-content p {
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      color: rgba(255, 255, 255, 0.75);
-      margin-block: 24px 36px;
-      max-width: 620px;
+      max-width: 650px;
+      margin-block: 24px 34px;
+      margin-inline: auto;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: clamp(1.03rem, 2vw, 1.22rem);
     }
 
     .hero-btn-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      justify-content: center;
+      gap: 15px;
     }
 
-    /* WhatsApp Simulator UI Component */
-    .chat-simulator {
-      background-color: #0b141a;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-dark);
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-      max-width: 440px;
-      width: 100%;
-      margin-inline: auto;
-    }
-
-    .chat-header {
-      background-color: #202c33;
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .avatar-bot {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--primary-gradient);
-      display: grid;
-      place-items: center;
-      font-size: 1.3rem;
-    }
-
-    .avatar-info h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-
-    .avatar-info p {
-      font-size: 0.75rem;
-      color: #8696a0;
-    }
-
-    .chat-body {
-      background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
-      background-size: cover;
-      padding: 20px;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .bubble {
-      max-width: 85%;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 0.88rem;
-      position: relative;
-    }
-
-    .bubble-user {
-      align-self: flex-end;
-      background-color: #005c4b;
-      color: #e9edef;
-      border-top-right-radius: 0;
-    }
-
-    .bubble-bot {
-      align-self: flex-start;
-      background-color: #202c33;
-      color: #e9edef;
-      border-top-left-radius: 0;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .bubble .time {
-      font-size: 0.68rem;
-      color: #8696a0;
-      text-align: right;
-      margin-top: 4px;
-      display: block;
-    }
-
-    /* ==========================================================================
-       5. COUNTER DASHBOARD STATS
-       ========================================================================== */
     .dashboard-stats {
-      background-color: var(--bg-card);
       border-bottom: 1px solid var(--border-color);
+      background: var(--bg-card);
       padding-block: 40px;
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 24px;
       text-align: center;
     }
 
     .stat-item h3 {
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      font-weight: 800;
       color: var(--primary);
-      letter-spacing: -0.02em;
+      font-size: clamp(1.9rem, 4vw, 2.55rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
     }
 
     .stat-item p {
-      font-size: 0.95rem;
-      font-weight: 600;
+      margin-top: 2px;
       color: var(--text-muted);
-      margin-top: 4px;
+      font-size: 0.94rem;
+      font-weight: 700;
     }
 
-    /* ==========================================================================
-       6. CORE FEATURES GRID
-       ========================================================================== */
-    .features-section {
-      background-color: var(--bg-main);
+    .pricing-section,
+    .testimonials-section {
+      background: var(--bg-main);
     }
 
-    .features-container-grid {
+    .pricing-grid,
+    .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
     }
 
-    .feature-card-pro {
-      background-color: var(--bg-card);
+    .pricing-grid-bottom {
+      margin-top: 28px;
+      max-width: 780px;
+      margin-inline: auto;
+    }
+
+    .pricing-card,
+    .testi-card {
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 36px;
+      background: var(--bg-card);
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
 
-    .feature-card-pro:hover {
+    .pricing-card:hover,
+    .testi-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(255, 71, 133, 0.2);
+      border-color: rgba(255, 71, 133, 0.22);
     }
 
-    .feature-icon-wrapper {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background-color: var(--primary-light);
+    .terms-section {
+      background: #ffffff;
+    }
+
+    .terms-layout {
       display: grid;
-      place-items: center;
-      margin-bottom: 24px;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
     }
 
-    .feature-icon-wrapper svg {
-      width: 26px;
-      height: 26px;
-      fill: var(--primary);
-    }
-
-    .feature-card-pro h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-
-    .feature-card-pro p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       7. TERMS OF SERVICE / PERATURAN PENGGUNAAN BOT (ELEGANT LEGAL GRID)
-       ========================================================================== */
-    .rules-section {
-      background-color: #ffffff;
-    }
-
-    .rules-grid-pro {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .rule-card {
-      background-color: #f8fafc;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 28px;
-      transition: var(--transition);
-      display: flex;
-      gap: 20px;
-    }
-
-    .rule-card:hover {
-      border-color: var(--primary);
-      background-color: #ffffff;
-      box-shadow: var(--shadow-md);
-    }
-
-    .rule-index {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--primary-gradient);
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 0.95rem;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(255, 71, 133, 0.2);
-    }
-
-    .rule-body h4 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .rule-body p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .rule-body code {
-      background-color: rgba(255, 71, 133, 0.1);
-      color: var(--primary-dark);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .rules-footer-notice {
-      grid-column: span 2;
-      text-align: center;
-      padding: 20px;
-      background-color: var(--primary-light);
-      border: 1px dashed var(--primary);
-      border-radius: var(--radius-sm);
-      color: var(--primary-dark);
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-top: 20px;
-      font-style: italic;
-    }
-
-    /* ==========================================================================
-       8. PRICING TIERS SECTION
-       ========================================================================== */
-    .pricing-section {
-      background-color: var(--bg-main);
-    }
-
-    .pricing-grid-pro {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .pricing-card-pro {
-      background-color: var(--bg-card);
+    .terms-summary-card {
+      position: sticky;
+      top: 24px;
+      overflow: hidden;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 40px 36px;
+      background: linear-gradient(180deg, #fff7fb 0%, #ffffff 64%);
       box-shadow: var(--shadow-sm);
+    }
+
+    .terms-summary-head {
+      padding: 28px 26px 22px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .terms-summary-head h3 {
+      margin-top: 12px;
+      font-size: 1.35rem;
+      font-weight: 850;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    .terms-summary-head p {
+      margin-top: 10px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .terms-highlights {
+      display: grid;
+      gap: 12px;
+      padding: 22px 26px 26px;
+    }
+
+    .terms-highlight {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid rgba(255, 71, 133, 0.12);
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .terms-highlight span {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 11px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+
+    .terms-highlight strong {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.25;
+    }
+
+    .terms-highlight small {
+      display: block;
+      margin-top: 2px;
+      color: var(--text-soft);
+      font-size: 0.78rem;
+    }
+
+    .terms-content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .terms-group {
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .terms-group-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 26px;
+      border-bottom: 1px solid var(--border-color);
+      background:
+        linear-gradient(135deg, rgba(255, 71, 133, 0.08), transparent 55%),
+        #ffffff;
+    }
+
+    .terms-group-header h3 {
+      font-size: 1.18rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+    }
+
+    .terms-group-header p {
+      margin-top: 4px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .terms-count {
+      flex: 0 0 auto;
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: var(--primary-soft);
+      font-size: 0.78rem;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .terms-list {
+      display: grid;
+      padding: 8px 0;
+      counter-reset: terms-counter;
+    }
+
+    .terms-list.start-5 {
+      counter-reset: terms-counter 4;
+    }
+
+    .terms-list.start-11 {
+      counter-reset: terms-counter 10;
+    }
+
+    .terms-list.start-16 {
+      counter-reset: terms-counter 15;
+    }
+
+    .terms-list li {
+      counter-increment: terms-counter;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 16px;
+      padding: 20px 26px;
+    }
+
+    .terms-list li + li {
+      border-top: 1px solid rgba(15, 23, 42, 0.07);
+    }
+
+    .terms-list li::before {
+      content: counter(terms-counter, decimal-leading-zero);
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      font-size: 0.85rem;
+      font-weight: 900;
+      box-shadow: 0 10px 18px rgba(255, 71, 133, 0.18);
+    }
+
+    .terms-list h4 {
+      margin-bottom: 6px;
+      font-size: 1rem;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+    }
+
+    .terms-list p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.62;
+    }
+
+    .terms-notice {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 22px 24px;
+      border: 1px dashed rgba(255, 71, 133, 0.45);
+      border-radius: var(--radius-md);
+      color: var(--primary-dark);
+      background: var(--primary-soft);
+      font-size: 0.96rem;
+      font-weight: 800;
+    }
+
+    .terms-notice-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+    }
+
+    .pricing-card {
+      position: relative;
       display: flex;
       flex-direction: column;
-      position: relative;
-      transition: var(--transition);
+      overflow: hidden;
+      padding: 38px 34px;
     }
 
-    .pricing-card-pro:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .pricing-card-pro.featured {
-      border: 2.5px solid var(--primary);
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
       box-shadow: var(--shadow-md);
     }
 
     .ribbon {
       position: absolute;
       top: 20px;
-      right: -30px;
-      background: linear-gradient(90deg, #ff4785, #e0316e);
-      color: #ffffff;
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 6px 36px;
+      right: -34px;
       transform: rotate(45deg);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 7px 40px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
-    .pricing-card-pro h3 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      letter-spacing: -0.02em;
+    .pricing-card h3 {
+      margin-top: 18px;
+      font-size: 1.35rem;
+      font-weight: 850;
+      letter-spacing: -0.03em;
     }
 
-    .pricing-card-pro .tier-desc {
+    .tier-desc {
+      margin-top: 8px;
       color: var(--text-muted);
       font-size: 0.92rem;
-      margin-bottom: 24px;
+      line-height: 1.6;
     }
 
-    .pricing-card-pro .price-box {
-      margin-bottom: 30px;
+    .price-box {
       display: flex;
       align-items: baseline;
       gap: 6px;
+      margin-block: 24px 26px;
     }
 
-    .pricing-card-pro .amount {
-      font-size: 2.4rem;
+    .price-box .amount {
+      font-size: 2.45rem;
       font-weight: 900;
-      letter-spacing: -0.04em;
-      color: var(--text-main);
+      line-height: 1;
+      letter-spacing: -0.05em;
     }
 
-    .pricing-card-pro .period {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      font-weight: 600;
+    .price-box .period {
+      color: var(--text-soft);
+      font-size: 0.94rem;
+      font-weight: 700;
     }
 
-    .pricing-card-pro .features-list {
-      margin-bottom: 36px;
+    .features-list {
       display: grid;
-      gap: 14px;
+      gap: 13px;
+      margin-bottom: 32px;
     }
 
-    .pricing-card-pro .features-list li {
+    .features-list li {
       display: flex;
+      gap: 11px;
       align-items: flex-start;
-      gap: 12px;
-      font-size: 0.95rem;
       color: #334155;
+      font-size: 0.94rem;
+      line-height: 1.5;
     }
 
-    .pricing-card-pro .features-list svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--primary);
-      flex-shrink: 0;
-      margin-top: 2px;
+    .features-list li::before {
+      content: "✓";
+      display: grid;
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      place-items: center;
+      border-radius: 50%;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      font-size: 0.74rem;
+      font-weight: 900;
+      margin-top: 1px;
     }
 
-    .pricing-card-pro .btn {
+    .pricing-card .btn {
       width: 100%;
       margin-top: auto;
     }
 
     .payment-notice-banner {
-      margin-top: 50px;
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 24px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      gap: 18px 32px;
+      margin-top: 48px;
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
     }
 
     .payment-title {
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--text-main);
+      font-size: 0.94rem;
+      font-weight: 850;
     }
 
     .payment-logos {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
-      gap: 12px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text-muted);
+      gap: 10px;
     }
 
     .payment-badge {
-      padding: 6px 12px;
-      background-color: #f1f5f9;
-      border-radius: 8px;
-      border: 1px solid rgba(0,0,0,0.04);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      padding: 6px 11px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 9px;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      font-size: 0.82rem;
+      font-weight: 800;
     }
 
-    /* ==========================================================================
-       9. STEP BY STEP HOW TO ORDER
-       ========================================================================== */
-    .flow-section {
-      background-color: #ffffff;
+    .flow-section,
+    .faq-section {
+      background: #ffffff;
     }
 
     .flow-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      position: relative;
-    }
-
-    .flow-item {
-      text-align: center;
-      position: relative;
-    }
-
-    .flow-num {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--primary-gradient);
-      color: var(--text-white);
-      font-weight: 800;
-      font-size: 1.2rem;
-      display: grid;
-      place-items: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 6px 15px rgba(255, 71, 133, 0.3);
-    }
-
-    .flow-item h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .flow-item p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      max-width: 280px;
-      margin-inline: auto;
-    }
-
-    /* ==========================================================================
-       10. CLIENT TESTIMONIALS
-       ========================================================================== */
-    .testimonials-section {
-      background-color: var(--bg-main);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
 
-    .testi-card {
-      background-color: var(--bg-card);
+    .flow-item {
+      padding: 32px 28px;
       border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 30px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      background: #ffffff;
       box-shadow: var(--shadow-sm);
     }
 
-    .testi-stars {
-      color: #f59e0b;
-      font-size: 1.1rem;
-      margin-bottom: 14px;
+    .flow-num {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      margin: 0 auto 18px;
+      border-radius: 18px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      font-size: 1.12rem;
+      font-weight: 900;
+      box-shadow: 0 12px 24px rgba(255, 71, 133, 0.24);
     }
 
-    .testi-card p {
-      font-size: 0.95rem;
-      color: #334155;
-      font-style: italic;
+    .flow-item h3 {
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+      font-weight: 850;
+    }
+
+    .flow-item p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .testi-card {
+      padding: 28px;
+      border-radius: var(--radius-md);
+    }
+
+    .testi-stars {
+      margin-bottom: 12px;
+      color: #f59e0b;
+      font-size: 1.06rem;
+      letter-spacing: 0.06em;
+    }
+
+    .testi-card > p {
       margin-bottom: 20px;
+      color: #334155;
+      font-size: 0.94rem;
+      font-style: italic;
+      line-height: 1.68;
     }
 
     .testi-profile {
@@ -781,48 +798,38 @@
     }
 
     .testi-avatar {
+      display: grid;
       width: 44px;
       height: 44px;
-      border-radius: 50%;
-      background-color: #e2e8f0;
-      font-weight: 700;
-      display: grid;
       place-items: center;
+      border-radius: 50%;
       color: var(--primary-dark);
+      background: #fce7f3;
+      font-weight: 900;
     }
 
     .testi-info h4 {
       font-size: 0.92rem;
-      font-weight: 700;
+      font-weight: 850;
     }
 
     .testi-info p {
+      color: var(--text-soft);
       font-size: 0.78rem;
-      color: var(--text-muted);
-      margin: 0;
-      font-style: normal;
-    }
-
-    /* ==========================================================================
-       11. FAQ ACCORDION COLLAPSE SYSTEM
-       ========================================================================== */
-    .faq-section {
-      background-color: #ffffff;
     }
 
     .faq-container {
-      max-width: 800px;
-      margin-inline: auto;
       display: grid;
-      gap: 16px;
+      max-width: 840px;
+      margin-inline: auto;
+      gap: 15px;
     }
 
     .faq-item {
+      overflow: hidden;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
-      overflow: hidden;
-      background-color: #f8fafc;
-      transition: var(--transition);
+      background: #f8fafc;
     }
 
     .faq-input {
@@ -830,43 +837,43 @@
     }
 
     .faq-label {
-      padding: 20px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-weight: 700;
-      font-size: 1.05rem;
+      gap: 16px;
+      padding: 20px 22px;
+      color: var(--text-main);
+      font-size: 1rem;
+      font-weight: 850;
       cursor: pointer;
       user-select: none;
-      color: var(--text-main);
     }
 
     .faq-label::after {
       content: "+";
-      font-size: 1.4rem;
-      font-weight: 400;
-      transition: var(--transition);
+      flex: 0 0 auto;
       color: var(--primary);
+      font-size: 1.45rem;
+      font-weight: 500;
+      transition: var(--transition);
     }
 
     .faq-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-      background-color: #ffffff;
+      background: #ffffff;
+      transition: max-height 0.25s ease;
     }
 
     .faq-content p {
-      padding: 20px 24px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
+      padding: 20px 22px;
       border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.94rem;
     }
 
-    /* Checked Accordion State */
     .faq-input:checked ~ .faq-content {
-      max-height: 1000px;
-      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+      max-height: 420px;
     }
 
     .faq-input:checked ~ .faq-label {
@@ -878,43 +885,46 @@
       transform: rotate(180deg);
     }
 
-    /* ==========================================================================
-       12. ABOUT / FOOTER CONTAINER
-       ========================================================================== */
     .footer-pro {
-      background-color: var(--bg-dark);
-      color: rgba(255, 255, 255, 0.65);
-      padding-block: 80px 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-block: 76px 30px;
+      color: rgba(255, 255, 255, 0.66);
+      background: var(--bg-dark);
     }
 
     .footer-grid-main {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 60px;
+      gap: 38px;
+      margin-bottom: 56px;
     }
 
     .footer-col h4 {
+      margin-bottom: 18px;
       color: var(--text-white);
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 20px;
+      font-size: 0.98rem;
+      font-weight: 850;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
     .footer-col p {
+      color: rgba(255, 255, 255, 0.62);
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    .footer-col ul {
+    .footer-brand {
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul,
+    .contact-widget {
       display: grid;
-      gap: 12px;
+      gap: 11px;
     }
 
-    .footer-col ul a {
+    .footer-col ul a,
+    .contact-widget-item {
       font-size: 0.9rem;
     }
 
@@ -923,605 +933,651 @@
       padding-left: 4px;
     }
 
-    .contact-widget {
-      display: grid;
-      gap: 12px;
-    }
-
     .contact-widget-item {
       display: flex;
-      align-items: center;
       gap: 10px;
-      font-size: 0.88rem;
+      align-items: center;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 30px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.85rem;
+      justify-content: space-between;
+      gap: 14px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.84rem;
     }
 
     .footer-bottom strong {
-      color: var(--text-white);
+      color: #ffffff;
     }
 
-    /* ==========================================================================
-       13. RESPONSIVE MEDIA QUERIES
-       ========================================================================== */
-    @media (max-width: 1024px) {
-      .hero-grid, .rules-grid-pro {
+    @media (max-width: 1100px) {
+      .terms-layout {
         grid-template-columns: 1fr;
-        gap: 50px;
       }
-      .hero-content { text-align: center; }
-      .hero-content p { margin-inline: auto; }
-      .hero-btn-group { justify-content: center; }
-      .features-container-grid, .pricing-grid-pro, .testimonials-grid {
+
+      .terms-summary-card {
+        position: static;
+      }
+
+      .terms-highlights {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .pricing-grid,
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .footer-grid-main {
         grid-template-columns: repeat(2, 1fr);
       }
-      .rules-footer-notice {
-        grid-column: span 1;
-      }
     }
 
-    @media (max-width: 768px) {
-      .nav-menu { display: none; }
-      .features-container-grid, .pricing-grid-pro, .testimonials-grid, .flow-grid, .footer-grid-main {
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .section-padding {
+        padding-block: 70px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .navbar {
+        padding-block: 20px;
+      }
+
+      .hero-wrapper {
+        padding-block: 132px 82px;
+      }
+
+      .stats-grid,
+      .terms-highlights,
+      .pricing-grid,
+      .flow-grid,
+      .testimonials-grid,
+      .footer-grid-main {
         grid-template-columns: 1fr;
       }
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+      
+      .pricing-grid-bottom {
+        max-width: 100%;
+        margin-top: 28px;
       }
-      .section-padding { padding-block: 70px; }
-      .rules-footer-notice { margin-top: 10px; }
+
+      .terms-group-header {
+        display: grid;
+      }
+
+      .terms-list li {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px;
+      }
+
+      .terms-list li::before {
+        width: 38px;
+        height: 38px;
+      }
+
+      .terms-notice {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .footer-bottom {
+        display: grid;
+      }
     }
 
     @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .hero-btn-group .btn { width: 100%; }
-      .pricing-card-pro { padding: 30px 20px; }
-      .rule-card { flex-direction: column; gap: 14px; }
-    }
+      .hero-btn-group .btn {
+        width: 100%;
+      }
 
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
-      70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+      .terms-summary-head,
+      .terms-highlights,
+      .pricing-card,
+      .testi-card {
+        padding-inline: 20px;
+      }
+
+      .payment-notice-banner {
+        align-items: stretch;
+      }
+
+      .payment-title {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-
   <header class="header-nav">
-    <nav class="navbar container" aria-label="Navigasi Utama Aine Store">
-      <a class="brand-logo" href="#home">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2zm0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm1 3v2h2v2h-2v2h-2v-2H9V9h2V7h2zm-2 4v2h2v-2h-2z"/></svg>
+    <nav class="navbar container" aria-label="Navigasi utama Aine Store">
+      <a class="brand-logo" href="#home" aria-label="Aine Store Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3v2h2v2h-2v2h-2v-2H9V9h2V7h2Zm-2 4v2h2v-2h-2Z"/></svg>
         <span>Aine Store</span>
       </a>
+
       <ul class="nav-menu">
         <li><a class="nav-item active" href="#home">Home</a></li>
-        <li><a href="#features" class="nav-item">Fitur</a></li>
-        <li><a href="#rules" class="nav-item">Peraturan</a></li>
-        <li><a href="#pricing" class="nav-item">Harga</a></li>
-        <li><a href="#faq" class="nav-item">FAQ</a></li>
-        <li><a href="https://wa.me/62895330379186" target="_blank" class="nav-item" style="color: var(--primary);">Hubungi Admin</a></li>
+        <li><a class="nav-item" href="#rules">Ketentuan</a></li>
+        <li><a class="nav-item" href="#pricing">Harga</a></li>
+        <li><a class="nav-item" href="#faq">FAQ</a></li>
+        <li><a class="nav-item nav-contact" href="https://wa.me/62895330379186" target="_blank" rel="noopener noreferrer">Hubungi Admin</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero-wrapper" id="home">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <h1>Kelola Komunitas & Grup dengan <span>Automated Bot</span></h1>
-        <p>Aine Store menyediakan ekosistem terlengkap untuk WhatsApp Bot Automation & High-Performance Server Hosting. Cepat, tangguh, stabil, dan siap mendongkrak fungsionalitas obrolan Anda.</p>
-        <div class="hero-btn-group">
-          <a href="#pricing" class="btn btn-primary">Lihat Daftar Harga</a>
-          <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20tertarik%20melihat%20demo%20fitur%20bot%20Anda." target="_blank" class="btn btn-outline">Konsultasi Gratis</a>
-        </div>
-      </div>
-      
-      <div class="chat-simulator" aria-hidden="true">
-        <div class="chat-header">
-          <div class="avatar-bot">🤖</div>
-          <div class="avatar-info">
-            <h3>Aine Virtual Assistant</h3>
-            <p>Online • Official Service Agent</p>
-          </div>
-        </div>
-        <div class="chat-body">
-          <div class="bubble bubble-user">
-            .tiktok https://vm.tiktok.com/ZGJAmhSrp/
-            <span class="time">15:20</span>
-          </div>
-          <div class="bubble bubble-bot">
-            ⏳ Wait, it's being processed..
-            <span class="time">15:20</span>
-          </div>
-          <div class="bubble bubble-bot" style="background-color: #1f2c34;">
-            🎥 <b>TikTok Downloader Success!</b><br>
-            • Creator: Aine<br>
-            • Title: Cat compilation funny video 2026<br><br>
-            <i>[Sending Video Buffer (HD No Watermark)...]</i>
-            <span class="time">15:21</span>
+  <main>
+    <section class="hero-wrapper" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge badge-dark">Premium Automation Service</span>
+          <h1>Kelola Komunitas & Grup dengan <span>Automated Bot</span></h1>
+          <p>Aine Store menyediakan ekosistem lengkap untuk WhatsApp Bot Automation dan server hosting berperforma tinggi. Cepat, stabil, responsif, dan siap membantu operasional komunitas Anda.</p>
+          <div class="hero-btn-group">
+            <a href="#pricing" class="btn btn-primary">Lihat Daftar Harga</a>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20tanya-tanya%20seputar%20Bot." target="_blank" rel="noopener noreferrer" class="btn btn-outline">Konsultasi Gratis</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="dashboard-stats">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <h3>5,000+</h3>
-        <p>Grup Aktif</p>
-      </div>
-      <div class="stat-item">
-        <h3>150k+</h3>
-        <p>Pengguna Terbantu</p>
-      </div>
-      <div class="stat-item">
-        <h3>99.99%</h3>
-        <p>Server Uptime</p>
-      </div>
-      <div class="stat-item">
-        <h3>24/7</h3>
-        <p>Support Standby</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="features-section section-padding" id="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge badge-primary">High Tier Technology</span>
-        <h2>Fitur Unggulan Arsitektur Bot Kami</h2>
-        <p>Sistem kami dirancang menggunakan library Baileys premium berkecepatan tinggi dengan integrasi scraper mutakhir.</p>
-      </div>
-      
-      <div class="features-container-grid">
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M19 12v7H5v-7H3v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z"/></svg>
-          </div>
-          <h3>All-in-One Downloader</h3>
-          <p>Scraping media otomatis dari TikTok, Douyin, Instagram Reels, Facebook Media, dan SoundCloud dengan sistem multi-fallback otomatis.</p>
+    <section class="dashboard-stats" aria-label="Statistik layanan">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <h3>5,000+</h3>
+          <p>Grup Aktif</p>
         </div>
-
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12v7a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4v-1a8 8 0 0 1 16 0v1h-3a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-7A10 10 0 0 0 12 2z"/></svg>
-          </div>
-          <h3>Voice Note Transcriber</h3>
-          <p>Ubah file rekaman suara atau audio apa pun (MP3, OGG, Opus, M4A) menjadi tulisan teks secara instan menggunakan AI engine tercanggih.</p>
+        <div class="stat-item">
+          <h3>150k+</h3>
+          <p>Pengguna Terbantu</p>
         </div>
-
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm1.093-14.288a.748.748 0 0 0-.585-.205c-.328.026-.644.173-.865.421l-3.328 3.733a.75.75 0 0 0 .56 1.25h2.125l-.837 3.51a.75.75 0 0 0 1.305.61l3.524-4.267a.75.75 0 0 0-.573-1.224h-1.99l.664-2.784a.75.75 0 0 0-.205-.539z"/></svg>
-          </div>
-          <h3>Claude AI Integration</h3>
-          <p>Sistem chatbot pintar bertenaga Claude Haiku dengan Jailbreak Persona khusus sehingga bot bertingkah natural sebagai karakter Aine.</p>
+        <div class="stat-item">
+          <h3>99.99%</h3>
+          <p>Server Uptime</p>
         </div>
-
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </div>
-          <h3>Image HD Enhancer (Remini)</h3>
-          <p>Meningkatkan kualitas gambar buram menjadi sangat jernih dan beresolusi tinggi langsung lewat ruang obrolan melalui API JHIhancer.</p>
-        </div>
-
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.04 15.04 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.56-.44-1-1-1H4c-.56 0-1 .44-1 1 0 9.39 7.61 17 17 17 .56 0 1-.44 1-1v-3.5c0-.56-.44-1-1-1z"/></svg>
-          </div>
-          <h3>Anti-Call Protection</h3>
-          <p>Secara otomatis menolak panggilan masuk (telepon pribadi) serta memberikan sistem peringatan limit otomatis sebelum melakukan pemblokiran otomatis.</p>
-        </div>
-
-        <div class="feature-card-pro">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
-          </div>
-          <h3>Interactive Buttons Message</h3>
-          <p>Mendukung pengiriman pesan interaktif tipe terbaru (Native Flow Message) seperti tombol salin otomatis (Copy text) dan menu list.</p>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Support Standby</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="rules-section section-padding" id="rules">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge badge-primary">Legal & Compliance</span>
-        <h2>Ketentuan Layanan & Regulasi Bot</h2>
-        <p>Harap baca dan pahami seluruh poin regulasi di bawah ini demi kenyamanan, keamanan, dan kelancaran bersama selama menggunakan sistem operasional kami.</p>
-      </div>
-
-      <div class="rules-grid-pro">
-        
-        <div class="rule-card">
-          <div class="rule-index">1</div>
-          <div class="rule-body">
-            <h4>Akses & Penyimpanan Data</h4>
-            <p>Kami mungkin mengumpulkan data dasar seperti nama pengguna dan nomor telepon untuk keperluan operasional. Data tersebut dienkripsi secara aman dan tidak akan didistribusikan tanpa persetujuan Anda.</p>
-          </div>
+    <section class="terms-section section-padding" id="rules">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Syarat & Ketentuan</span>
+          <h2>Ketentuan Layanan & Regulasi Bot</h2>
+          <p>Bagian ini sudah dirapikan menjadi beberapa kategori agar mudah dibaca, tidak padat, dan tetap jelas untuk pengguna layanan.</p>
         </div>
 
-        <div class="rule-card">
-          <div class="rule-index">2</div>
-          <div class="rule-body">
-            <h4>Penghapusan Data Massal</h4>
-            <p>Demi menjaga performa, kami berhak melakukan pembersihan basis data secara berkala, yang dapat mengakibatkan penghapusan riwayat data pengguna.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">3</div>
-          <div class="rule-body">
-            <h4>Privasi Media (No-Log Policy)</h4>
-            <p>Sistem kami dirancang untuk tidak menyimpan media apa pun. Seluruh gambar, video, file, maupun dokumen yang Anda kirimkan langsung dihapus permanen dari server setelah diproses.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">4</div>
-          <div class="rule-body">
-            <h4>Keamanan Informasi Pribadi</h4>
-            <p>Tim Aine Store tidak akan pernah meminta informasi pribadi atau kredensial sensitif Anda. Harap berhati-hati terhadap segala bentuk upaya penipuan.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">5</div>
-          <div class="rule-body">
-            <h4>Pelaporan Bug & Anomali</h4>
-            <p>Pengguna dihimbau untuk segera melaporkan segala bentuk anomali, bug, atau error yang ditemukan pada sistem kepada tim pengembang (Owner) untuk perbaikan.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">6</div>
-          <div class="rule-body">
-            <h4>Ketersediaan Layanan (Uptime)</h4>
-            <p>Kirimkan perintah cukup satu kali. Jika tidak ada respons, harap tunggu. Kegagalan respons secara terus-menerus mengindikasikan bot sedang dalam jadwal pemeliharaan (offline).</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">7</div>
-          <div class="rule-body">
-            <h4>Larangan Spam & Penyalahgunaan</h4>
-            <p>Dilarang keras melakukan aktivitas spam, menyebarkan perangkat lunak berbahaya (virtex/malware), atau melakukan panggilan (voice/video call) ke nomor bot.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">8</div>
-          <div class="rule-body">
-            <h4>Kebijakan Penghentian (No Refund)</h4>
-            <p>Tindakan mengeluarkan (kick) bot dari grup—baik secara sengaja maupun tidak, atau karena masa sewa berakhir—akan menghanguskan sisa masa aktif. Tidak berlaku pengembalian dana (refund).</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">9</div>
-          <div class="rule-body">
-            <h4>Pengawasan Sistem (Monitoring)</h4>
-            <p>Tim Admin/Owner berhak memantau log aktivitas operasi bot secara berkala guna memastikan stabilitas server dan kepatuhan pengguna terhadap aturan layanan.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">10</div>
-          <div class="rule-body">
-            <h4>Sistem Penyewaan Eksklusif</h4>
-            <p>Layanan bot pada grup beroperasi secara mutlak melalui sistem sewa resmi. Kami tidak memproses permintaan pengaktifan grup secara gratis.</p>
-          </div>
-        </div>
-
-        <div class="rule-card" style="grid-column: span 2;">
-          <div class="rule-index">11</div>
-          <div class="rule-body">
-            <h4>Penindakan Pelanggaran Berat</h4>
-            <p>Segala bentuk pelanggaran hukum, eksploitasi celah, atau penggunaan bot yang melanggar ketentuan akan ditindak dengan pemblokiran permanen sepihak tanpa pemberitahuan sebelumnya. Pelaporan kepada pihak berwenang dapat dilakukan jika pelanggaran berpotensi melibatkan tindak kejahatan siber.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">12</div>
-          <div class="rule-body">
-            <h4>Sanksi Spam Command</h4>
-            <p>Sistem otomatis dilengkapi dengan pembatas laju (rate-limiter). Melakukan spam perintah secara berlebihan akan dikenakan sanksi <i>banned</i> sistem sementara selama 5 jam.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">13</div>
-          <div class="rule-body">
-            <h4>Inaktivitas & Pengeluaran Bot</h4>
-            <p>Akun pengguna yang tidak aktif (AFK) lebih dari 3 hari berisiko diblokir otomatis. Begitu pula bagi pengguna yang terdeteksi mengeluarkan bot dari suatu grup.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">14</div>
-          <div class="rule-body">
-            <h4>Sanksi & Denda Administratif</h4>
-            <p>Pencabutan sanksi akan dikenakan denda pemulihan sistem: Rp 2.678,- untuk membuka akses blokir (Gunakan <code>/bayarunblock</code>), dan Rp 1.567,- untuk membuka sanksi banned (Gunakan <code>/bayarunbanned</code>).</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">15</div>
-          <div class="rule-body">
-            <h4>Ketentuan Layanan Premium</h4>
-            <p>Aktivasi Premium (<code>/bayarpremium</code> atau <code>/bayarpremiumgroup</code>) memberikan kekebalan dari sanksi banned 5 jam, mendapatkan kuota perintah tak terbatas (unlimited limit), serta membuka akses terhadap fitur eksklusif.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">16</div>
-          <div class="rule-body">
-            <h4>Pembelian Kuota (Limit)</h4>
-            <p>Kuota penggunaan reguler dapat ditambah sewaktu-waktu melalui sistem tagihan otomatis menggunakan perintah <code>/bayarlimit</code>.</p>
-          </div>
-        </div>
-
-        <div class="rule-card">
-          <div class="rule-index">17</div>
-          <div class="rule-body">
-            <h4>Perpanjangan Masa Aktif</h4>
-            <p>Gunakan perintah <code>/bayarexpired</code> untuk memperpanjang durasi keaktifan bot di dalam grup Anda secara otomatis sebelum masa tenggang berakhir.</p>
-          </div>
-        </div>
-
-        <div class="rule-card" style="grid-column: span 2;">
-          <div class="rule-index">18</div>
-          <div class="rule-body">
-            <h4>Penolakan Tanggung Jawab (Disclaimer)</h4>
-            <p>Seluruh dampak dari perintah yang dieksekusi melalui layanan bot ini merupakan tanggung jawab pengguna sepenuhnya. Kami selaku pihak pengembang terlepas dari segala tuntutan atas kerugian materil maupun imateril.</p>
-          </div>
-        </div>
-
-        <div class="rules-footer-notice">
-          Dengan tetap menggunakan layanan bot ini, Anda dianggap telah menyetujui seluruh Syarat dan Ketentuan (ToS) di atas.
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing-section section-padding" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge badge-primary">Official Rate Card</span>
-        <h2>Pilihan Paket Sewa & Layanan</h2>
-        <p>Harga jujur dan transparan sesuai rincian brosur pamflet resmi Aine Store. Proses aktivasi instan.</p>
-      </div>
-
-      <div class="pricing-grid-pro">
-        
-        <div class="pricing-card-pro">
-          <span class="badge" style="color: #64748b; background-color: #f1f5f9;">Regular Tier</span>
-          <h3>Sewa Bot (Regular)</h3>
-          <p class="tier-desc">Sangat cocok untuk admin komunitas skala menengah yang membutuhkan bot moderasi.</p>
-          <div class="price-box">
-            <span class="amount">15k</span>
-            <span class="period">/ Bulan</span>
-          </div>
-          <ul class="features-list">
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Paket 1 Bulan: Rp 15.000</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Paket 4 Bulan: Rp 50.000</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Paket 1 Tahun (Normal): Rp 150.000</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Fitur Lengkap &amp; Responsif</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Sistem Online Payment</li>
-          </ul>
-          <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20sewa%20bot%20paket%20Regular%20(15k/bulan)." target="_blank" class="btn btn-secondary">Hubungi Admin</a>
-        </div>
-
-        <div class="pricing-card-pro featured">
-          <div class="ribbon">Best Deal</div>
-          <span class="badge badge-discount">Harga Diskon 🔥</span>
-          <h3>Sewa Bot Tahunan</h3>
-          <p class="tier-desc">Paket investasi terbaik jangka panjang demi eksklusivitas komunitas skala besar.</p>
-          <div class="price-box">
-            <span class="amount">100k</span>
-            <span class="period">/ Setahun</span>
-          </div>
-          <ul class="features-list">
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> <b>Masa Aktif Full 1 Tahun</b></li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> <b>Termasuk Akses Fitur Premium</b></li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Lebih Hemat Rp 50.000 / Tahun</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Unlimited Limit Seluruh Member</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Prioritas Server &amp; Fast Support</li>
-          </ul>
-          <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20mau%20ambil%20PAKET%20DISKON%20TAHUNAN%20100K%20%2B%20PREMIUM." target="_blank" class="btn btn-primary">Ambil Paket Diskon</a>
-        </div>
-
-        <div class="pricing-card-pro">
-          <span class="badge badge-server">Infrastructure Tier</span>
-          <h3>Sewa Server Hosting</h3>
-          <p class="tier-desc">Ditujukan bagi developer yang ingin menjalankan script bot milik pribadi tanpa kendala mati.</p>
-          <div class="price-box">
-            <span class="amount">80k</span>
-            <span class="period">/ Bulan</span>
-          </div>
-          <ul class="features-list">
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Server High-Performance 24/7</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Akses Full Panel Pterodactyl</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Garansi Network Cepat &amp; Anti-Lag</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Pengaturan Port Mandiri Terbuka</li>
-            <li><svg viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg> Via Online Payment Terintegrasi</li>
-          </ul>
-          <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20tertarik%20menyewa%20Server%20Hosting%20Bot%20(80k/bulan)." target="_blank" class="btn btn-secondary">Sewa Server</a>
-        </div>
-
-      </div>
-
-      <div class="payment-notice-banner">
-        <div class="payment-title">💳 INTEGRATED CHANNELS ONLINE PAYMENT :</div>
-        <div class="payment-logos">
-          <span class="payment-badge">DANA</span>
-          <span class="payment-badge">GOPAY</span>
-          <span class="payment-badge">QRIS OTOMATIS</span>
-          <span class="payment-badge">LINKAJA</span>
-          <span class="payment-badge">SEABANK</span>
-          <span class="payment-badge">BANK JAGO</span>
-          <span class="payment-badge">SHOPEEPAY</span>
-          <span class="payment-badge">OVO</span>
-          <span class="payment-badge">PAYPAL</span>
-          <span class="payment-badge">FLIP</span>
-          <span class="payment-badge">SUPERBANK</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="flow-section section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>3 Langkah Mudah Memulai</h2>
-        <p>Sistem registrasi dirancang ringkas agar menghemat waktu efisiensi operasional.</p>
-      </div>
-
-      <div class="flow-grid">
-        <div class="flow-item">
-          <div class="flow-num">1</div>
-          <h3>Pilih Paket Layanan</h3>
-          <p>Tentukan pilihan paket bot regular, server, atau ambil paket diskon tahunan 100k.</p>
-        </div>
-        <div class="flow-item">
-          <div class="flow-num">2</div>
-          <h3>Konfirmasi Admin</h3>
-          <p>Hubungi admin Aine Store via WhatsApp dan selesaikan transaksi lewat gateway invoice otomatis.</p>
-        </div>
-        <div class="flow-item">
-          <div class="flow-num">3</div>
-          <h3>Aktivasi Instan</h3>
-          <p>Sistem diaktifkan dari pusat dalam kurun waktu kurang dari 5 menit setelah pembayaran valid.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials-section section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>Dipercaya Oleh Ratusan Pengelola Grup</h2>
-        <p>Ulasan jujur langsung dari para pemilik grup komunitas gaming, jualan online, dan grup diskusi.</p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Paket diskon tahunan 100k murah banget dan menghemat budget operasional grup komunitas discord-wa saya sampai setahun penuh!"</p>
-          <div class="testi-profile">
-            <div class="testi-avatar">R</div>
-            <div class="testi-info">
-              <h4>Rian G.</h4>
-              <p>Owner Gaming Community</p>
+        <div class="terms-layout">
+          <aside class="terms-summary-card" aria-label="Ringkasan syarat dan ketentuan">
+            <div class="terms-summary-head">
+              <span class="badge badge-primary">Ringkasan</span>
+              <h3>Aturan penting sebelum menggunakan layanan</h3>
+              <p>Pengguna dianggap menyetujui seluruh ketentuan setelah menggunakan bot atau melakukan pembelian layanan.</p>
             </div>
-          </div>
-        </div>
 
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Fitur transkripsi audio (.totext) sangat menolong ketika saya sibuk di kantor dan tidak sempat mendengarkan rekaman VN yang panjang."</p>
-          <div class="testi-profile">
-            <div class="testi-avatar">A</div>
-            <div class="testi-info">
-              <h4>Amelia Putri</h4>
-              <p>Online Shop Manager</p>
+            <div class="terms-highlights">
+              <div class="terms-highlight">
+                <span>18</span>
+                <div>
+                  <strong>Poin Ketentuan</strong>
+                  <small>Dikelompokkan agar lebih rapi.</small>
+                </div>
+              </div>
+              <div class="terms-highlight">
+                <span>0</span>
+                <div>
+                  <strong>No Media Log</strong>
+                  <small>Media tidak disimpan permanen.</small>
+                </div>
+              </div>
+              <div class="terms-highlight">
+                <span>5h</span>
+                <div>
+                  <strong>Sanksi Spam</strong>
+                  <small>Banned sementara untuk spam command.</small>
+                </div>
+              </div>
+              <div class="terms-highlight">
+                <span>⚠</span>
+                <div>
+                  <strong>No Refund</strong>
+                  <small>Masa aktif hangus jika bot dikeluarkan.</small>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </aside>
 
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Server panel Pterodactyl-nya kencang, dapet alokasi port aman buat naruh bot custom buatan saya sendiri. Respon adminnya juga gercep."</p>
-          <div class="testi-profile">
-            <div class="testi-avatar">F</div>
-            <div class="testi-info">
-              <h4>Fahmi Azhar</h4>
-              <p>Fullstack Developer</p>
+          <div class="terms-content">
+            <article class="terms-group">
+              <div class="terms-group-header">
+                <div>
+                  <h3>Data, Privasi, dan Keamanan</h3>
+                  <p>Ketentuan tentang data pengguna, media yang diproses, serta perlindungan informasi pribadi.</p>
+                </div>
+                <span class="terms-count">4 poin</span>
+              </div>
+              <ol class="terms-list">
+                <li>
+                  <div>
+                    <h4>Akses & Penyimpanan Data</h4>
+                    <p>Kami dapat mengumpulkan data dasar seperti nama pengguna dan nomor telepon untuk kebutuhan operasional. Data tersebut diamankan dan tidak didistribusikan tanpa persetujuan pengguna.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Penghapusan Data Massal</h4>
+                    <p>Demi menjaga performa layanan, kami berhak melakukan pembersihan basis data secara berkala, termasuk penghapusan riwayat data pengguna.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Privasi Media</h4>
+                    <p>Sistem dirancang untuk tidak menyimpan media secara permanen. Gambar, video, file, atau dokumen yang dikirim akan dihapus dari server setelah proses selesai.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Keamanan Informasi Pribadi</h4>
+                    <p>Tim Aine Store tidak akan pernah meminta kredensial sensitif. Pengguna wajib berhati-hati terhadap upaya penipuan yang mengatasnamakan layanan.</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+
+            <article class="terms-group">
+              <div class="terms-group-header">
+                <div>
+                  <h3>Operasional dan Etika Penggunaan</h3>
+                  <p>Aturan dasar penggunaan bot agar layanan tetap stabil, aman, dan nyaman untuk semua pengguna.</p>
+                </div>
+                <span class="terms-count">6 poin</span>
+              </div>
+              <ol class="terms-list start-5">
+                <li>
+                  <div>
+                    <h4>Pelaporan Bug & Anomali</h4>
+                    <p>Pengguna dihimbau segera melaporkan bug, error, atau anomali sistem kepada Owner agar dapat dilakukan pemeriksaan dan perbaikan.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Ketersediaan Layanan</h4>
+                    <p>Kirim perintah cukup satu kali. Jika tidak ada respons, tunggu beberapa saat karena bot dapat sedang mengalami antrean proses atau pemeliharaan.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Larangan Spam & Penyalahgunaan</h4>
+                    <p>Dilarang melakukan spam, menyebarkan virtex atau malware, serta melakukan voice call atau video call ke nomor bot.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Kebijakan Penghentian</h4>
+                    <p>Jika bot dikeluarkan dari grup secara sengaja maupun tidak, atau masa sewa berakhir, sisa masa aktif dapat dianggap hangus dan tidak berlaku refund.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Pengawasan Sistem</h4>
+                    <p>Admin atau Owner berhak memantau log aktivitas operasional bot untuk memastikan stabilitas server dan kepatuhan pengguna terhadap aturan layanan.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Sistem Penyewaan Resmi</h4>
+                    <p>Layanan bot untuk grup berjalan melalui sistem sewa resmi. Permintaan pengaktifan grup gratis tidak diproses.</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+
+            <article class="terms-group">
+              <div class="terms-group-header">
+                <div>
+                  <h3>Sanksi, Premium, dan Administrasi</h3>
+                  <p>Penindakan pelanggaran, aturan sanksi, dan informasi pemulihan akses pengguna.</p>
+                </div>
+                <span class="terms-count">5 poin</span>
+              </div>
+              <ol class="terms-list start-11">
+                <li>
+                  <div>
+                    <h4>Penindakan Pelanggaran Berat</h4>
+                    <p>Pelanggaran hukum, eksploitasi celah, atau penggunaan bot yang melanggar ketentuan dapat ditindak dengan pemblokiran permanen tanpa pemberitahuan sebelumnya.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Sanksi Spam Command</h4>
+                    <p>Sistem dilengkapi rate-limiter. Spam perintah berlebihan dapat dikenakan banned sistem sementara selama 5 jam.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Inaktivitas & Pengeluaran Bot</h4>
+                    <p>Akun yang tidak aktif lebih dari 3 hari berisiko terkena pemblokiran otomatis. Pengguna yang mengeluarkan bot dari grup juga dapat dikenakan sanksi.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Sanksi & Denda Administratif</h4>
+                    <p>Pemulihan akses dapat dikenakan biaya: Rp 2.678 untuk membuka blokir melalui <code>/bayarunblock</code> dan Rp 1.567 untuk membuka banned melalui <code>/bayarunbanned</code>.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Ketentuan Layanan Premium</h4>
+                    <p>Aktivasi Premium melalui <code>/bayarpremium</code> atau <code>/bayarpremiumgroup</code> memberikan akses fitur eksklusif, unlimited limit, dan kekebalan dari banned 5 jam.</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+
+            <article class="terms-group">
+              <div class="terms-group-header">
+                <div>
+                  <h3>Limit, Perpanjangan, dan Disclaimer</h3>
+                  <p>Informasi terkait kuota penggunaan, masa aktif layanan, dan batas tanggung jawab pengembang.</p>
+                </div>
+                <span class="terms-count">3 poin</span>
+              </div>
+              <ol class="terms-list start-16">
+                <li>
+                  <div>
+                    <h4>Pembelian Kuota</h4>
+                    <p>Kuota penggunaan reguler dapat ditambah sewaktu-waktu melalui sistem tagihan otomatis menggunakan perintah <code>/bayarlimit</code>.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Perpanjangan Masa Aktif</h4>
+                    <p>Gunakan <code>/bayarexpired</code> untuk memperpanjang masa aktif bot di grup sebelum masa tenggang berakhir.</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Penolakan Tanggung Jawab</h4>
+                    <p>Seluruh dampak dari perintah yang dieksekusi melalui bot menjadi tanggung jawab pengguna. Pihak pengembang tidak bertanggung jawab atas kerugian materil maupun imateril akibat penggunaan layanan.</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+
+            <div class="terms-notice">
+              <div class="terms-notice-icon">✓</div>
+              <p>Dengan tetap menggunakan layanan bot ini, Anda dianggap telah membaca, memahami, dan menyetujui seluruh Syarat dan Ketentuan di atas.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="faq-section section-padding" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <h2>Pertanyaan yang Sering Diajukan</h2>
-        <p>Informasi ringkas seputar aspek teknis operasional Aine Store.</p>
+    <section class="pricing-section section-padding" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Official Rate Card</span>
+          <h2>Pilihan Paket Sewa & Layanan</h2>
+          <p>Harga dibuat transparan dengan proses aktivasi cepat setelah pembayaran tervalidasi.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <span class="badge badge-regular">Paket Reguler</span>
+            <h3>Sewa 1 Bulan</h3>
+            <p class="tier-desc">Cocok untuk uji coba atau admin komunitas skala menengah.</p>
+            <div class="price-box">
+              <span class="amount">15k</span>
+              <span class="period">/ bulan</span>
+            </div>
+            <ul class="features-list">
+              <li>Masa aktif 1 Bulan</li>
+              <li>Fitur lengkap dan responsif</li>
+              <li>Sistem online payment</li>
+            </ul>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20sewa%20bot%20paket%20Reguler%201%20Bulan%20(15k)." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Pilih Reguler</a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="badge badge-regular">Paket Medium</span>
+            <h3>Sewa 4 Bulan</h3>
+            <p class="tier-desc">Pilihan pas untuk komunitas yang lebih stabil dan aktif.</p>
+            <div class="price-box">
+              <span class="amount">50k</span>
+              <span class="period">/ 4 bulan</span>
+            </div>
+            <ul class="features-list">
+              <li>Masa aktif 4 Bulan</li>
+              <li>Lebih hemat waktu perpanjang</li>
+              <li>Fitur lengkap dan responsif</li>
+              <li>Sistem online payment</li>
+            </ul>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20sewa%20bot%20paket%20Medium%204%20Bulan%20(50k)." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Pilih Medium</a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="badge badge-regular">Paket Normal</span>
+            <h3>Sewa 1 Tahun</h3>
+            <p class="tier-desc">Paket standar 1 tahun untuk grup jangka panjang.</p>
+            <div class="price-box">
+              <span class="amount">150k</span>
+              <span class="period">/ setahun</span>
+            </div>
+            <ul class="features-list">
+              <li>Masa aktif full 1 Tahun</li>
+              <li>Tidak perlu repot perpanjang</li>
+              <li>Fitur lengkap dan responsif</li>
+              <li>Sistem online payment</li>
+            </ul>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20ingin%20sewa%20bot%20paket%20Normal%201%20Tahun%20(150k)." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Pilih Normal</a>
+          </article>
+        </div>
+
+        <div class="pricing-grid pricing-grid-bottom">
+          <article class="pricing-card featured">
+            <div class="ribbon">Best Deal</div>
+            <span class="badge badge-discount">Harga Diskon 🔥</span>
+            <h3>Tahunan + Premium</h3>
+            <p class="tier-desc">Paket hemat jangka panjang dengan layanan VIP tanpa batas.</p>
+            <div class="price-box">
+              <span class="amount">100k</span>
+              <span class="period">/ setahun</span>
+            </div>
+            <ul class="features-list">
+              <li><strong>Masa aktif full 1 tahun</strong></li>
+              <li><strong>Termasuk akses fitur premium</strong></li>
+              <li>Lebih hemat Rp 50.000 per tahun</li>
+              <li>Unlimited limit seluruh member</li>
+              <li>Prioritas server dan fast support</li>
+            </ul>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20mau%20ambil%20PAKET%20DISKON%20TAHUNAN%20100K%20%2B%20PREMIUM." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ambil Paket Diskon</a>
+          </article>
+
+          <article class="pricing-card">
+            <span class="badge badge-server">Infrastructure Tier</span>
+            <h3>Sewa Server Hosting</h3>
+            <p class="tier-desc">Untuk developer yang ingin menjalankan script bot mandiri secara stabil.</p>
+            <div class="price-box">
+              <span class="amount">80k</span>
+              <span class="period">/ bulan</span>
+            </div>
+            <ul class="features-list">
+              <li>Server high-performance 24/7</li>
+              <li>Akses panel Pterodactyl</li>
+              <li>Network cepat dan anti-lag</li>
+              <li>Pengaturan port mandiri</li>
+              <li>Online payment terintegrasi</li>
+            </ul>
+            <a href="https://wa.me/62895330379186?text=Halo%20Aine%2C%20saya%20tertarik%20menyewa%20Server%20Hosting%20Bot%20(80k/bulan)." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Sewa Server</a>
+          </article>
+        </div>
+
+        <div class="payment-notice-banner" aria-label="Metode pembayaran">
+          <div class="payment-title">💳 Integrated Online Payment:</div>
+          <div class="payment-logos">
+            <span class="payment-badge">DANA</span>
+            <span class="payment-badge">GOPAY</span>
+            <span class="payment-badge">QRIS</span>
+            <span class="payment-badge">LINKAJA</span>
+            <span class="payment-badge">SEABANK</span>
+            <span class="payment-badge">BANK JAGO</span>
+            <span class="payment-badge">SHOPEEPAY</span>
+            <span class="payment-badge">OVO</span>
+            <span class="payment-badge">PAYPAL</span>
+            <span class="payment-badge">FLIP</span>
+            <span class="payment-badge">SUPERBANK</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq-container">
-        
-        <div class="faq-item">
-          <input type="checkbox" id="faq-1" class="faq-input">
-          <label for="faq-1" class="faq-label">Bagaimana cara memasukkan bot ke dalam grup?</label>
-          <div class="faq-content">
-            <p>Setelah melakukan proses konfirmasi pembayaran kepada Admin, Anda akan diberikan tautan undangan (link invite) khusus untuk memasukkan bot secara langsung ke dalam grup tujuan Anda.</p>
-          </div>
+    <section class="flow-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>3 Langkah Mudah Memulai</h2>
+          <p>Sistem registrasi dibuat ringkas agar proses pemesanan berjalan cepat dan mudah dipahami.</p>
         </div>
 
-        <div class="faq-item">
-          <input type="checkbox" id="faq-2" class="faq-input">
-          <label for="faq-2" class="faq-label">Apakah paket server diletakkan pada panel kontrol?</label>
-          <div class="faq-content">
-            <p>Benar. Bagi penyewa server hosting (paket 80k/bulan), Anda akan diberikan hak akses kredensial penuh ke dalam dasbor panel Pterodactyl kami demi kenyamanan manajemen pengelolaan berkas.</p>
-          </div>
+        <div class="flow-grid">
+          <article class="flow-item">
+            <div class="flow-num">1</div>
+            <h3>Pilih Paket Layanan</h3>
+            <p>Tentukan paket bot regular, paket tahunan, atau server hosting sesuai kebutuhan Anda.</p>
+          </article>
+          <article class="flow-item">
+            <div class="flow-num">2</div>
+            <h3>Konfirmasi Admin</h3>
+            <p>Hubungi admin Aine Store melalui WhatsApp dan selesaikan transaksi melalui metode pembayaran yang tersedia.</p>
+          </article>
+          <article class="flow-item">
+            <div class="flow-num">3</div>
+            <h3>Aktivasi Layanan</h3>
+            <p>Layanan akan diproses setelah pembayaran valid dan data grup atau server sudah dikonfirmasi.</p>
+          </article>
         </div>
-
-        <div class="faq-item">
-          <input type="checkbox" id="faq-3" class="faq-input">
-          <label for="faq-3" class="faq-label">Apakah pembayaran online ini otomatis terverifikasi?</label>
-          <div class="faq-content">
-            <p>Ya. Sistem kami menggunakan verifikasi kode QRIS otomatis serta integrasi sistem e-wallet terpusat untuk meminimalisir waktu tunggu antrean konfirmasi manual.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <input type="checkbox" id="faq-4" class="faq-input">
-          <label for="faq-4" class="faq-label">Apakah bot ini akan memblokir user jika melakukan spam panggil?</label>
-          <div class="faq-content">
-            <p>Sistem kami dilengkapi algoritma Anti-Call Protection otomatis. Jika ada akun pribadi melakukan panggilan ke nomor bot, sistem akan langsung menolak panggilan tersebut dan memberikan sanksi blokir jika melanggar batas regulasi limit.</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Dipercaya Oleh Banyak Pengelola Grup</h2>
+          <p>Ulasan dari pengguna komunitas, online shop, dan developer yang memakai layanan Aine Store.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Paket tahunan 100k sangat hemat untuk kebutuhan operasional grup komunitas saya selama satu tahun penuh."</p>
+            <div class="testi-profile">
+              <div class="testi-avatar">R</div>
+              <div class="testi-info">
+                <h4>Rian G.</h4>
+                <p>Owner Gaming Community</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Fitur transkripsi audio membantu saat saya tidak sempat mendengarkan voice note yang panjang."</p>
+            <div class="testi-profile">
+              <div class="testi-avatar">A</div>
+              <div class="testi-info">
+                <h4>Amelia Putri</h4>
+                <p>Online Shop Manager</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Server panel Pterodactyl-nya responsif untuk menjalankan bot custom. Admin juga cepat membantu."</p>
+            <div class="testi-profile">
+              <div class="testi-avatar">F</div>
+              <div class="testi-info">
+                <h4>Fahmi Azhar</h4>
+                <p>Fullstack Developer</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-padding" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+          <p>Informasi ringkas seputar proses sewa, pembayaran, dan penggunaan layanan.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <input type="checkbox" id="faq-1" class="faq-input" />
+            <label for="faq-1" class="faq-label">Bagaimana cara memasukkan bot ke dalam grup?</label>
+            <div class="faq-content">
+              <p>Setelah pembayaran dikonfirmasi, admin akan memberikan instruksi atau tautan undangan untuk memasukkan bot ke grup tujuan.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-2" class="faq-input" />
+            <label for="faq-2" class="faq-label">Apakah paket server memakai panel kontrol?</label>
+            <div class="faq-content">
+              <p>Ya. Penyewa server hosting akan mendapatkan akses panel Pterodactyl untuk mengelola file dan menjalankan script bot.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-3" class="faq-input" />
+            <label for="faq-3" class="faq-label">Apakah pembayaran otomatis terverifikasi?</label>
+            <div class="faq-content">
+              <p>Metode pembayaran tertentu dapat diproses melalui invoice atau QRIS. Admin tetap dapat membantu apabila ada kendala konfirmasi.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq-4" class="faq-input" />
+            <label for="faq-4" class="faq-label">Apakah bot memblokir user yang melakukan spam panggil?</label>
+            <div class="faq-content">
+              <p>Sistem memiliki proteksi panggilan otomatis. Panggilan ke nomor bot dapat ditolak dan pelanggaran berulang dapat dikenakan sanksi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer-pro">
     <div class="container footer-grid-main">
       <div class="footer-col">
-        <a class="brand-logo" href="#home" style="margin-bottom: 20px;">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2zm0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8zm1 3v2h2v2h-2v2h-2v-2H9V9h2V7h2zm-2 4v2h2v-2h-2z"/></svg>
+        <a class="brand-logo footer-brand" href="#home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3v2h2v2h-2v2h-2v-2H9V9h2V7h2Zm-2 4v2h2v-2h-2Z"/></svg>
           <span>Aine Store</span>
         </a>
-        <p>Penyedia solusi kebutuhan automasi bot obrolan berkecepatan tinggi serta infrastruktur server hosting berperforma andal di Indonesia.</p>
+        <p>Penyedia solusi automasi bot WhatsApp dan infrastruktur hosting berperforma andal untuk kebutuhan komunitas Indonesia.</p>
       </div>
 
       <div class="footer-col">
         <h4>Navigasi</h4>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#features">Fitur Utama</a></li>
-          <li><a href="#rules">Peraturan</a></li>
+          <li><a href="#rules">Ketentuan</a></li>
           <li><a href="#pricing">Daftar Harga</a></li>
         </ul>
       </div>
@@ -1548,9 +1604,8 @@
 
     <div class="container footer-bottom">
       <p>© 2026 <strong>Aine Store</strong>. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Developed with passion for high-performance automation ecosystems.</p>
+      <p>Developed for high-performance automation ecosystems.</p>
     </div>
   </footer>
-
 </body>
 </html>
